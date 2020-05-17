@@ -44,9 +44,9 @@ export class MorkBorgActorSheet extends ActorSheet {
     const actorData = sheetData.actor;
     
     // Initialize containers.
-    const gear = [];
+    const gears = [];
     const weapons = [];
-    const armor = [];
+    const armors = [];
     const scrolls = [];
 
     // Iterate through items, allocating to containers
@@ -54,17 +54,17 @@ export class MorkBorgActorSheet extends ActorSheet {
     for (let i of sheetData.items) {
       let item = i.data;
       i.img = i.img || DEFAULT_TOKEN;
-      // Append to gear.
-      if (i.type === 'item') {
-        gear.push(i);
+      // Append to gears.
+      if (i.type === 'gear') {
+        gears.push(i);
       }
       // Append to weapons.
       else if (i.type === 'weapon') {
         weapons.push(i);
       }
-      // Append to armor.
+      // Append to armors.
       else if (i.type === 'armor') {
-        armor.push(i);
+        armors.push(i);
       }
       // Append to scrolls.
       else if (i.type === 'scroll') {
@@ -81,9 +81,9 @@ export class MorkBorgActorSheet extends ActorSheet {
     }
 
     // Assign and return
-    actorData.gear = gear;
+    actorData.gears = gears;
     actorData.weapons = weapons;
-    actorData.armor = armor;
+    actorData.armors = armors;
     actorData.scrolls = scrolls;
   }
 

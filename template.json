@@ -51,7 +51,7 @@
     }
   },
   "Item": {
-    "types": ["item", "scroll", "weapon", "armor", "container"],
+    "types": ["gear", "scroll", "weapon", "armor", "container"],
     "templates": {
       "base": {
         "description": "",
@@ -62,7 +62,7 @@
         "usageDie": "Ud4"
       }
     },
-    "item": {
+    "gear": {
       "templates": ["base", "consumable"],
       "quantity": 1
     },
