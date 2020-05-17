@@ -1,0 +1,94 @@
+{
+  "Actor": {
+    "types": ["character"],
+    "templates": {
+      "base": {
+        "biography": "",
+        "movement":20,
+        "health": {
+          "value": 10,
+          "min": 0,
+          "max": 10
+        }
+      }
+    },
+    "character": {
+      "templates": ["base"],
+      "attributes": {
+        "level": {
+          "value": 1,
+          "min":1,
+          "max":10
+        },
+        "inventorySlots": {
+          "used":0,
+          "value":0,
+          "max":8
+        }
+      },
+      "abilities": {
+        "strength": {
+          "value": 0,
+          "min": -3,
+          "max": 6
+        },
+        "agility": {
+          "value": 0,
+          "min": -3,
+          "max": 6
+        },
+        "presence": {
+          "value": 0,
+          "min": -3,
+          "max": 6
+        },
+        "toughness": {
+          "value": 0,
+          "min": -3,
+          "max": 6
+        }
+      }
+    }
+  },
+  "Item": {
+    "types": ["item", "scroll", "weapon", "armor", "container"],
+    "templates": {
+      "base": {
+        "description": "",
+        "slots": 1,
+        "sliver": 0
+      },
+      "consumable": {
+        "usageDie": "Ud4"
+      }
+    },
+    "item": {
+      "templates": ["base", "consumable"],
+      "quantity": 1
+    },
+    "scroll": {
+      "templates": ["base"],
+      "scrollType": ["unclean", "sacred"]
+    },
+    "weapon": {
+      "templates": ["base", "consumable"],
+      "damageDice": "1d4",
+      "hands": 1,
+      "ranged": false,
+      "range": 0
+    },
+    "armor": {
+      "templates": ["base"],
+      "tier": {
+        "value": 1,
+        "min": 0,
+        "max": 3
+      },
+      "damageReductionDice": "1d2"
+    },
+    "container": {
+      "templates": ["base"],
+      "capacity": 5
+    }
+  }
+}
