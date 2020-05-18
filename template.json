@@ -14,17 +14,20 @@
     },
     "character": {
       "templates": ["base"],
-      "attributes": {
-        "level": {
-          "value": 1,
-          "min":1,
-          "max":10
-        },
-        "inventorySlots": {
-          "used":0,
-          "value":0,
-          "max":8
-        }
+      "experiences": 0,
+      "powers": 0,
+      "level": {
+        "value": 1,
+        "min":1,
+        "max":10
+      },
+      "omensDice": 2,
+      "omens": 0,
+      "silver": 0,
+      "inventorySlots": {
+        "used":0,
+        "value":0,
+        "max":8
       },
       "abilities": {
         "strength": {
@@ -68,7 +71,7 @@
     },
     "scroll": {
       "templates": ["base"],
-      "scrollType": ["unclean", "sacred"]
+      "scrollType": null
     },
     "weapon": {
       "templates": ["base", "consumable"],

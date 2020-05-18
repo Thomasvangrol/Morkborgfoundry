@@ -9,26 +9,32 @@ export class MorkBorgActorSheet extends ActorSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["morkborg", "sheet", "actor"],
       template: "systems/morkborg/templates/actor/actor-sheet.html",
-      width: 600,
-      height: 600,
+      width: 1000,
+      height: 620,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
     });
   }
 
+  /** @override */
+  get template() {
+    const path = "systems/morkborg/templates/actor";
+    return `${path}/${this.actor.data.type}-sheet.html`;
+  }
+  
   /* -------------------------------------------- */
 
   /** @override */
   getData() {
     const data = super.getData();
     data.dtypes = ["String", "Number", "Boolean"];
-    for (let attr of Object.values(data.data.attributes)) {
-      attr.isCheckbox = attr.dtype === "Boolean";
-    }
 
     // Prepare items.
     if (this.actor.data.type == 'character') {
       this._prepareCharacterItems(data);
     }
+    // else if (this.actor.data.type == 'npc') {
+    //   this._prepareNpcItems(data);
+    // }
 
     return data;
   }
@@ -47,37 +53,48 @@ export class MorkBorgActorSheet extends ActorSheet {
     const gears = [];
     const weapons = [];
     const armors = [];
-    const scrolls = [];
+    const scrolls = {
+      "unclean": [],
+      "sacred": [],
+      "unknown": []
+    }
 
     // Iterate through items, allocating to containers
     // let totalWeight = 0;
     for (let i of sheetData.items) {
       let item = i.data;
       i.img = i.img || DEFAULT_TOKEN;
-      // Append to gears.
-      if (i.type === 'gear') {
-        gears.push(i);
-      }
+
       // Append to weapons.
-      else if (i.type === 'weapon') {
+      if (i.type === 'weapon') {
         weapons.push(i);
       }
+      
       // Append to armors.
       else if (i.type === 'armor') {
         armors.push(i);
       }
+
       // Append to scrolls.
       else if (i.type === 'scroll') {
-        scrolls.push(i);
+        // scrolls.push(i);
+        switch (i.data.scrollType) {
+          case 'unclean':
+            scrolls[i.data.scrollType].push(i);
+            break;
+          case 'sacred':
+            scrolls[i.data.scrollType].push(i);
+            break;
+          default:
+            scrolls["unknown"].push(i);
+            break;
+        }
       }
-      // Append to scrolls.
-      // else if (i.type === 'scroll') {
-      //   if (i.data.type === "unclean") {
-      //     spells[i.data.unclean].push(i);
-      //   } else if (i.data.type === "sacred") {
-      //     spells[i.data.sacred].push(i);
-      //   }
-      // }
+      
+      // Append to gears.
+      else if (i.type === 'gear') {
+        gears.push(i);
+      }
     }
 
     // Assign and return

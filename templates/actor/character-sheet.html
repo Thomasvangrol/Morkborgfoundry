@@ -2,7 +2,7 @@
 
     {{!-- Sheet Header --}}
     <header class="sheet-header">
-        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="150"/>
         <div class="header-fields">
             <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
             {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
@@ -20,6 +20,12 @@
                     <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number"/>
                   </div>
               </div>
+              <div class="resource flex-group-center">
+                  <label for="data.omens" class="resource-label">Omens</label>
+                  <div class="resource-content flexrow flex-center flex-between">
+                    <input type="text" name="data.omens" value="{{data.omens}}" data-dtype="Number"/>
+                  </div>
+              </div>
           </div>
           {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
           use both the "grid" and "grid-Ncol" class where "N" can be any number
@@ -28,8 +34,10 @@
             {{#each data.abilities as |ability key|}}
               <div class="ability flexrow flex-group-center">
                 <label for="data.abilities.{{key}}.value" class="resource-label">{{key}}</label>
-                <input type="text" name="data.abilities.{{key}}.value" value="{{numberFormat ability.value decimals=0 sign=true}}" data-dtype="Number"/>
-                <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.value" data-label="{{key}}">Roll</span>
+                <div class="flexrow flex-center flex-between">
+                  <input type="text" name="data.abilities.{{key}}.value" value="{{numberFormat ability.value decimals=0 sign=true}}" data-dtype="Number"/>
+                  <span class="ability-roll rollable" data-roll="d20+@abilities.{{key}}.value" data-label="{{key}}">Roll</span>
+                </div>
               </div>
             {{/each}}
           </div>
@@ -39,6 +47,7 @@
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="description">Description</a>
+        <a class="item" data-tab="class">Class</a>
         <a class="item" data-tab="items">Items</a>
         <a class="item" data-tab="scrolls">Scrolls</a>
     </nav>
@@ -51,8 +60,14 @@
             {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
         </div>
 
+        {{!-- Class Tab --}}
+        <div class="tab class" data-group="primary" data-tab="class">
+          <div class="item-name">TBD</div>
+        </div>
+
         {{!-- Owned Items Tab --}}
         <div class="tab items" data-group="primary" data-tab="items">
+
           <!-- Weapons -->
           <ol class="items-list">
             <li class="item flexrow item-header">
@@ -73,6 +88,7 @@
                 </li>
             {{/each}}
             </ol>
+
             <!-- Armor -->
             <ol class="items-list">
               <li class="item flexrow item-header">
@@ -93,6 +109,7 @@
                   </li>
               {{/each}}
             </ol>
+
             <!-- Items -->
             <ol class="items-list">
               <li class="item flexrow item-header">
@@ -115,43 +132,14 @@
             </ol>
         </div>
 
-        {{!-- Owned Unclean Scrolls Tab --}}
+        {{!-- Owned Scrolls Tab --}}
         <div class="tab scrolls" data-group="primary" data-tab="scrolls">
             <ol class="items-list">
-              <li class="item flexrow item-header">
-                <div class="item-image"></div>
-                <div class="item-name">Scrolls</div>
-                <div class="item-controls">
-                  <a class="item-control item-create" title="Create scroll" data-type="scroll"><i class="fas fa-plus"></i> Add Scroll</a>
-                </div>
-              </li>
-              {{#each actor.scrolls as |item id|}}
-                  <li class="item flexrow" data-item-id="{{item._id}}">
-                      <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
-                      <h4 class="item-name">{{item.name}}</h4>
-                      <div class="item-controls">
-                          <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-                          <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-                      </div>
-                  </li>
-              {{/each}}
-            </ol>
-        </div>
-
-
-        <!-- {{!-- Owned Scrolls Tab --}}
-        <div class="tab scrolls" data-group="primary" data-tab="scrolls">
-            <ol class="items-list">
-                <li class="item flexrow item-header">
-                  <div class="item-image"></div>
-                  <div class="item-name">Name</div>
-                  <div class="item-controls"></div>
-                </li>
                 {{#each actor.scrolls as |scrolls scrollType|}}
                     <li class="item flexrow item-header">
                       <div class="item-name">{{scrollType}} Scrolls</div>
                       <div class="item-controls">
-                        <a class="item-control item-create" title="Create item" data-type="scroll" data-scroll-type="{{scrollType}}"><i class="fas fa-plus"></i> Add {{scrollType}} Scroll</a>
+                        <a class="item-control item-create" title="Create scroll" data-type="scroll" data-scroll-type="{{scrollType}}"><i class="fas fa-plus"></i> Add {{scrollType}} Scroll</a>
                       </div>
                     </li>
                     {{#each scrolls as |item id|}}
@@ -166,7 +154,7 @@
                     {{/each}}
                 {{/each}}
             </ol>
-        </div> -->
+        </div>
 
     </section>
 </form>
