@@ -9,7 +9,7 @@ export class MorkBorgActorSheet extends ActorSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["morkborg", "sheet", "actor"],
       template: "systems/morkborg/templates/actor/actor-sheet.html",
-      width: 1000,
+      width: 900,
       height: 620,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
     });

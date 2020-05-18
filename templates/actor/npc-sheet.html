@@ -20,26 +20,6 @@
                     <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number"/>
                   </div>
               </div>
-              <div class="resource flex-group-center">
-                  <label for="data.omens" class="resource-label">Omens</label>
-                  <div class="resource-content flexrow flex-center flex-between">
-                    <input type="text" name="data.omens" value="{{data.omens}}" data-dtype="Number"/>
-                  </div>
-              </div>
-          </div>
-          {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-          use both the "grid" and "grid-Ncol" class where "N" can be any number
-          from 1 to 12 and will create that number of columns.  --}}
-          <div class="abilities grid grid-2col">
-            {{#each data.abilities as |ability key|}}
-              <div class="ability flexrow flex-group-center">
-                <label for="data.abilities.{{key}}.value" class="resource-label">{{key}}</label>
-                <div class="flexrow flex-center flex-between">
-                  <input type="text" name="data.abilities.{{key}}.value" value="{{numberFormat ability.value decimals=0 sign=true}}" data-dtype="Number"/>
-                  <span class="ability-roll rollable" data-roll="d20+@abilities.{{key}}.value" data-label="{{key}}">Roll</span>
-                </div>
-              </div>
-            {{/each}}
           </div>
         </div>
     </header>
@@ -47,7 +27,6 @@
     {{!-- Sheet Tab Navigation --}}
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="description">Description</a>
-        <a class="item" data-tab="class">Class</a>
         <a class="item" data-tab="items">Items</a>
         <a class="item" data-tab="scrolls">Scrolls</a>
     </nav>
@@ -58,11 +37,6 @@
         {{!-- Biography Tab --}}
         <div class="tab biography" data-group="primary" data-tab="description">
             {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
-        </div>
-
-        {{!-- Class Tab --}}
-        <div class="tab class" data-group="primary" data-tab="class">
-          <div class="item-name">TBD</div>
         </div>
 
         {{!-- Owned Items Tab --}}

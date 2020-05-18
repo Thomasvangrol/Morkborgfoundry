@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["character"],
+    "types": ["character", "npc"],
     "templates": {
       "base": {
         "biography": "",
@@ -12,6 +12,24 @@
         }
       }
     },
+    "npc": {
+      "templates": ["base"],
+      "morale": {
+        "value": 1,
+        "min": 0,
+        "max": 12
+      },
+      "defence": {
+        "description": "",
+        "defenceDice": ""
+      },
+      "attack": {
+        "description": "",
+        "ranged": false,
+        "damageDice": 4
+      },
+      "special": ""
+    },
     "character": {
       "templates": ["base"],
       "experiences": 0,
@@ -21,7 +39,6 @@
         "min":1,
         "max":10
       },
-      "omensDice": 2,
       "omens": 0,
       "silver": 0,
       "inventorySlots": {
@@ -54,7 +71,7 @@
     }
   },
   "Item": {
-    "types": ["gear", "scroll", "weapon", "armor", "container"],
+    "types": ["gear", "scroll", "weapon", "armor", "container, class, ability, origin"],
     "templates": {
       "base": {
         "description": "",
@@ -92,6 +109,27 @@
     "container": {
       "templates": ["base"],
       "capacity": 5
+    },
+    "class": {
+      "description": "",
+      "startingSilver": "",
+      "startingHitDice": "",
+      "omensDice": "",
+      "strMod": "",
+      "agiMod": "",
+      "touMod": "",
+      "preMod": "",
+      "weaponsDice": "",
+      "armorDice": "",
+      "canUseScrolls": true,
+      "abilites": [],
+      "origins": []
+    },
+    "ability": {
+      "description": ""
+    },
+    "origin": {
+      "description": ""
     }
   }
 }
