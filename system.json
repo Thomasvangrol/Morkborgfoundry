@@ -3,14 +3,94 @@
   "title": "Mork Borg",
   "description": "The Mork Borg system for FoundryVTT!",
   "version": "1.0.0",
-  "minimumCoreVersion": "0.5.5",
-  "compatibleCoreVersion": "0.5.5",
+  "compatibleCoreVersion": "0.5.7",
   "templateVersion": 2,
   "author": "Joseph Hopson",
   "esmodules": ["module/morkborg.js"],
   "styles": ["css/morkborg.css"],
   "scripts": [],
-  "packs": [],
+  "packs": [
+    {
+      "name": "gear",
+      "label": "Gear",
+      "system": "morkborg",
+      "module": "morkborg",
+      "path": "./packs/gear.db",
+      "entity": "Item"
+    },
+    {
+      "name": "armor",
+      "label": "Armor",
+      "system": "morkborg",
+      "module": "morkborg",
+      "path": "./packs/armor.db",
+      "entity": "Item"
+    },
+    {
+      "name": "weapons",
+      "label": "Weapons",
+      "system": "morkborg",
+      "module": "morkborg",
+      "path": "./packs/weapon.db",
+      "entity": "Item"
+    },
+    {
+      "name": "scrolls",
+      "label": "Scrolls",
+      "system": "morkborg",
+      "module": "morkborg",
+      "path": "./packs/scrolls.db",
+      "entity": "Item"
+    },
+    {
+      "name": "containers",
+      "label": "Containers",
+      "system": "morkborg",
+      "module": "morkborg",
+      "path": "./packs/containers.db",
+      "entity": "Item"
+    },
+    {
+      "name": "classes",
+      "label": "Classes",
+      "system": "morkborg",
+      "module": "morkborg",
+      "path": "./packs/classes.db",
+      "entity": "Item"
+    },
+    {
+      "name": "abilities",
+      "label": "Abilities",
+      "system": "morkborg",
+      "module": "morkborg",
+      "path": "./packs/abilities.db",
+      "entity": "Item"
+    },
+    {
+      "name": "origins",
+      "label": "origins",
+      "system": "morkborg",
+      "module": "morkborg",
+      "path": "./packs/origins.db",
+      "entity": "Item"
+    },
+    {
+      "name": "bestiary",
+      "label": "Bestiary",
+      "system": "morkborg",
+      "module": "morkborg",
+      "path": "./packs/bestiary.db",
+      "entity": "Actor"
+    },
+    {
+      "name": "macros",
+      "label": "Macros",
+      "system": "morkborg",
+      "module": "morkborg",
+      "path": "./packs/macros.db",
+      "entity": "Macro"
+    }
+  ],
   "languages": [
     {
       "lang": "en",
@@ -21,9 +101,9 @@
   "gridDistance": 5,
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",
-  "secondaryTokenAttribute": "power",
-  "url": "",
-  "manifest": "",
+  "secondaryTokenAttribute": "",
+  "url": "https://gitlab.com/philote/foundry-mork-borg",
+  "manifest": "https://gitlab.com/philote/foundry-mork-borg/-/raw/master/system.json",
   "download": "",
-  "license": "LICENSE.txt"
+  "license": ""
 }

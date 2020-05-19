@@ -9,6 +9,11 @@
           "value": 10,
           "min": 0,
           "max": 10
+        },
+        "currency": {
+          "gp": 0,
+          "sp": 0,
+          "cp": 0
         }
       }
     },
@@ -40,7 +45,6 @@
         "max":10
       },
       "omens": 0,
-      "silver": 0,
       "inventorySlots": {
         "used":0,
         "value":0,
@@ -71,12 +75,12 @@
     }
   },
   "Item": {
-    "types": ["gear", "scroll", "weapon", "armor", "container, class, ability, origin"],
+    "types": ["gear", "scroll", "weapon", "armor", "container", "class", "ability", "origin"],
     "templates": {
       "base": {
         "description": "",
         "slots": 1,
-        "sliver": 0
+        "silver": 0
       },
       "consumable": {
         "usageDie": "Ud4"
@@ -99,12 +103,10 @@
     },
     "armor": {
       "templates": ["base"],
-      "tier": {
-        "value": 1,
-        "min": 0,
-        "max": 3
-      },
-      "damageReductionDice": "1d2"
+      "tier": 1,
+      "damageReductionDice": "1d2",
+      "agilityPenalty": 0,
+      "defencePenalty": 0
     },
     "container": {
       "templates": ["base"],
