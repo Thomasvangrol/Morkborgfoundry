@@ -1,0 +1,325 @@
+[
+    {
+        "name": "Battle Axe",
+        "permission": {
+            "default": 0
+        },
+        "type": "weapon",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 35,
+            "usageDie": null,
+            "damageDice": "1d8",
+            "hands": 1,
+            "ranged": false,
+            "range": "close"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/weapons/axe-battle.png"
+    },
+    {
+        "name": "Short Bow",
+        "permission": {
+            "default": 0
+        },
+        "type": "weapon",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 13,
+            "usageDie": null,
+            "damageDice": "1d4",
+            "hands": 2,
+            "ranged": true,
+            "range": "Faraway"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/weapons/bow-short.jpg"
+    },
+    {
+        "name": "Long Bow",
+        "permission": {
+            "default": 0
+        },
+        "type": "weapon",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 25,
+            "usageDie": null,
+            "damageDice": "1d6",
+            "hands": 2,
+            "ranged": true,
+            "range": "Faraway"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/weapons/bow-long.jpg"
+    },
+    {
+        "name": "Sling",
+        "permission": {
+            "default": 0
+        },
+        "type": "weapon",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 4,
+            "usageDie": null,
+            "damageDice": "1d4",
+            "hands": 2,
+            "ranged": true,
+            "range": "Faraway"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/weapons/sling.jpg"
+    },
+    {
+        "name": "Crossbow",
+        "permission": {
+            "default": 0
+        },
+        "type": "weapon",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 40,
+            "usageDie": null,
+            "damageDice": "1d8",
+            "hands": 2,
+            "ranged": true,
+            "range": "Faraway"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/weapons/crossbow.jpg"
+    },
+    {
+        "name": "Club",
+        "permission": {
+            "default": 0
+        },
+        "type": "weapon",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 10,
+            "usageDie": null,
+            "damageDice": "1d6",
+            "hands": 1,
+            "ranged": false,
+            "range": "close"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/weapons/club.jpg"
+    },
+    {
+        "name": "Flail",
+        "permission": {
+            "default": 0
+        },
+        "type": "weapon",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 35,
+            "usageDie": null,
+            "damageDice": "1d8",
+            "hands": 1,
+            "ranged": false,
+            "range": "close"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/weapons/flail.png"
+    },
+    {
+        "name": "Femur",
+        "permission": {
+            "default": 0
+        },
+        "type": "weapon",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 0,
+            "usageDie": null,
+            "damageDice": "1d4",
+            "hands": 1,
+            "ranged": false,
+            "range": "close"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/weapons/femur.jpg"
+    },
+    {
+        "name": "Handaxe",
+        "permission": {
+            "default": 0
+        },
+        "type": "weapon",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 15,
+            "usageDie": null,
+            "damageDice": "1d6",
+            "hands": 1,
+            "ranged": false,
+            "range": "close"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/weapons/axe-hand.jpg"
+    },
+    {
+        "name": "Knife",
+        "permission": {
+            "default": 0
+        },
+        "type": "weapon",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 10,
+            "usageDie": null,
+            "damageDice": "1d4",
+            "hands": 1,
+            "ranged": false,
+            "range": "close"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/weapons/knife.png"
+    },
+    {
+        "name": "Mace",
+        "permission": {
+            "default": 0
+        },
+        "type": "weapon",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 25,
+            "usageDie": null,
+            "damageDice": "1d6",
+            "hands": 1,
+            "ranged": false,
+            "range": "close"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/weapons/mace.png"
+    },
+    {
+        "name": "Shortsword",
+        "permission": {
+            "default": 0
+        },
+        "type": "weapon",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 20,
+            "usageDie": null,
+            "damageDice": "1d4",
+            "hands": 1,
+            "ranged": false,
+            "range": "close"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/weapons/sword-short.jpg"
+    },
+    {
+        "name": "Staff",
+        "permission": {
+            "default": 0
+        },
+        "type": "weapon",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 5,
+            "usageDie": null,
+            "damageDice": "1d4",
+            "hands": 1,
+            "ranged": false,
+            "range": "close"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/weapons/staff.jpg"
+    },
+    {
+        "name": "Longsword",
+        "permission": {
+            "default": 0
+        },
+        "type": "weapon",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 30,
+            "usageDie": null,
+            "damageDice": "1d6",
+            "hands": 1,
+            "ranged": false,
+            "range": "close"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/weapons/sword-long.jpg"
+    },
+    {
+        "name": "Warhammer",
+        "permission": {
+            "default": 0
+        },
+        "type": "weapon",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 30,
+            "usageDie": null,
+            "damageDice": "1d6",
+            "hands": 1,
+            "ranged": false,
+            "range": "close"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/weapons/hammer-war.png"
+    },
+    {
+        "name": "Whip",
+        "permission": {
+            "default": 0
+        },
+        "type": "weapon",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 5,
+            "usageDie": null,
+            "damageDice": "1d2",
+            "hands": 1,
+            "ranged": false,
+            "range": "nearby"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/weapons/whip.png"
+    },
+    {
+        "name": "Spear",
+        "permission": {
+            "default": 0
+        },
+        "type": "weapon",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 20,
+            "usageDie": null,
+            "damageDice": "1d6",
+            "hands": 1,
+            "ranged": false,
+            "range": "nearby"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/weapons/whip.png"
+    },
+]

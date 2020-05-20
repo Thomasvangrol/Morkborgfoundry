@@ -1,5 +1,23 @@
 [
     {
+        "name": "Shield",
+        "permission": {
+            "default": 0
+        },
+        "type": "armor",
+        "data": {
+            "description": "<p>You can choose to ignore all damage from one attack but shield breaks.</p>",
+            "slots": 1,
+            "tier": 0,
+            "silver": 20,
+            "damageReductionDice": "1d1",
+            "agilityPenalty": 0,
+            "defencePenalty": 0
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/armor/leather.png"
+    },
+    {
         "name": "Light Armor",
         "permission": {
             "default": 0
@@ -24,7 +42,7 @@
         },
         "type": "armor",
         "data": {
-            "description": "<p>(scale, mail, etc...)</p>",
+            "description": "<p>(scale, mail, etc...) Scrolls will never work when wearing medium armor.</p>",
             "slots": 1,
             "tier": 2,
             "silver": 100,
@@ -42,7 +60,7 @@
         },
         "type": "armor",
         "data": {
-            "description": "<p>(splint, plate, etc...)</p>",
+            "description": "<p>(splint, plate, etc...) Scrolls will never work when wearing heavy armor.</p>",
             "slots": 2,
             "tier": 3,
             "silver": 200,

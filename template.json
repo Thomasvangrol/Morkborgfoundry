@@ -98,8 +98,9 @@
       "templates": ["base", "consumable"],
       "damageDice": "1d4",
       "hands": 1,
-      "ranged": false,
-      "range": 0
+      "range": "",
+      "rangeDistaind": "",
+      "damageType": ""
     },
     "armor": {
       "templates": ["base"],
