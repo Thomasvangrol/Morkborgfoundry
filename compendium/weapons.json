@@ -12,8 +12,9 @@
             "usageDie": null,
             "damageDice": "1d8",
             "hands": 1,
-            "ranged": false,
-            "range": "close"
+            "rangeType": "melee",
+            "rangeDistance": "close",
+            "damageType": "slashing"
         },
         "flags": {},
         "img": "systems/morkborg/icons/items/weapons/axe-battle.png"
@@ -31,8 +32,9 @@
             "usageDie": null,
             "damageDice": "1d4",
             "hands": 2,
-            "ranged": true,
-            "range": "Faraway"
+            "rangeType": "ranged",
+            "rangeDistance": "faraway",
+            "damageType": "piercing"
         },
         "flags": {},
         "img": "systems/morkborg/icons/items/weapons/bow-short.jpg"
@@ -50,8 +52,9 @@
             "usageDie": null,
             "damageDice": "1d6",
             "hands": 2,
-            "ranged": true,
-            "range": "Faraway"
+            "rangeType": "ranged",
+            "rangeDistance": "faraway",
+            "damageType": "piercing"
         },
         "flags": {},
         "img": "systems/morkborg/icons/items/weapons/bow-long.jpg"
@@ -69,8 +72,9 @@
             "usageDie": null,
             "damageDice": "1d4",
             "hands": 2,
-            "ranged": true,
-            "range": "Faraway"
+            "rangeType": "ranged",
+            "rangeDistance": "faraway",
+            "damageType": "bludgeoning"
         },
         "flags": {},
         "img": "systems/morkborg/icons/items/weapons/sling.jpg"
@@ -88,8 +92,9 @@
             "usageDie": null,
             "damageDice": "1d8",
             "hands": 2,
-            "ranged": true,
-            "range": "Faraway"
+            "rangeType": "ranged",
+            "rangeDistance": "faraway",
+            "damageType": "piercing"
         },
         "flags": {},
         "img": "systems/morkborg/icons/items/weapons/crossbow.jpg"
@@ -107,8 +112,9 @@
             "usageDie": null,
             "damageDice": "1d6",
             "hands": 1,
-            "ranged": false,
-            "range": "close"
+            "rangeType": "melee",
+            "rangeDistance": "close",
+            "damageType": "bludgeoning"
         },
         "flags": {},
         "img": "systems/morkborg/icons/items/weapons/club.jpg"
@@ -126,8 +132,9 @@
             "usageDie": null,
             "damageDice": "1d8",
             "hands": 1,
-            "ranged": false,
-            "range": "close"
+            "rangeType": "melee",
+            "rangeDistance": "close",
+            "damageType": "bludgeoning"
         },
         "flags": {},
         "img": "systems/morkborg/icons/items/weapons/flail.png"
@@ -145,8 +152,9 @@
             "usageDie": null,
             "damageDice": "1d4",
             "hands": 1,
-            "ranged": false,
-            "range": "close"
+            "rangeType": "melee",
+            "rangeDistance": "close",
+            "damageType": "bludgeoning"
         },
         "flags": {},
         "img": "systems/morkborg/icons/items/weapons/femur.jpg"
@@ -164,8 +172,9 @@
             "usageDie": null,
             "damageDice": "1d6",
             "hands": 1,
-            "ranged": false,
-            "range": "close"
+            "rangeType": "melee",
+            "rangeDistance": "close",
+            "damageType": "slashing"
         },
         "flags": {},
         "img": "systems/morkborg/icons/items/weapons/axe-hand.jpg"
@@ -183,8 +192,9 @@
             "usageDie": null,
             "damageDice": "1d4",
             "hands": 1,
-            "ranged": false,
-            "range": "close"
+            "rangeType": "both",
+            "rangeDistance": "close",
+            "damageType": "slashing"
         },
         "flags": {},
         "img": "systems/morkborg/icons/items/weapons/knife.png"
@@ -202,8 +212,9 @@
             "usageDie": null,
             "damageDice": "1d6",
             "hands": 1,
-            "ranged": false,
-            "range": "close"
+            "rangeType": "melee",
+            "rangeDistance": "close",
+            "damageType": "bludgeoning"
         },
         "flags": {},
         "img": "systems/morkborg/icons/items/weapons/mace.png"
@@ -221,8 +232,9 @@
             "usageDie": null,
             "damageDice": "1d4",
             "hands": 1,
-            "ranged": false,
-            "range": "close"
+            "rangeType": "melee",
+            "rangeDistance": "close",
+            "damageType": "slashing"
         },
         "flags": {},
         "img": "systems/morkborg/icons/items/weapons/sword-short.jpg"
@@ -240,8 +252,9 @@
             "usageDie": null,
             "damageDice": "1d4",
             "hands": 1,
-            "ranged": false,
-            "range": "close"
+            "rangeType": "melee",
+            "rangeDistance": "close",
+            "damageType": "bludgeoning"
         },
         "flags": {},
         "img": "systems/morkborg/icons/items/weapons/staff.jpg"
@@ -259,8 +272,9 @@
             "usageDie": null,
             "damageDice": "1d6",
             "hands": 1,
-            "ranged": false,
-            "range": "close"
+            "rangeType": "melee",
+            "rangeDistance": "close",
+            "damageType": "slashing"
         },
         "flags": {},
         "img": "systems/morkborg/icons/items/weapons/sword-long.jpg"
@@ -278,8 +292,9 @@
             "usageDie": null,
             "damageDice": "1d6",
             "hands": 1,
-            "ranged": false,
-            "range": "close"
+            "rangeType": "melee",
+            "rangeDistance": "close",
+            "damageType": "bludgeoning"
         },
         "flags": {},
         "img": "systems/morkborg/icons/items/weapons/hammer-war.png"
@@ -297,8 +312,9 @@
             "usageDie": null,
             "damageDice": "1d2",
             "hands": 1,
-            "ranged": false,
-            "range": "nearby"
+            "rangeType": "melee",
+            "rangeDistance": "nearby",
+            "damageType": "slashing"
         },
         "flags": {},
         "img": "systems/morkborg/icons/items/weapons/whip.png"
@@ -316,10 +332,51 @@
             "usageDie": null,
             "damageDice": "1d6",
             "hands": 1,
-            "ranged": false,
-            "range": "nearby"
+            "rangeType": "both",
+            "rangeDistance": "nearby",
+            "damageType": "piercing"
         },
         "flags": {},
         "img": "systems/morkborg/icons/items/weapons/whip.png"
     },
+    {
+        "name": "Zweihänder",
+        "permission": {
+            "default": 0
+        },
+        "type": "weapon",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 60,
+            "usageDie": null,
+            "damageDice": "1d10",
+            "hands": 2,
+            "rangeType": "melee",
+            "rangeDistance": "close",
+            "damageType": "slashing"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/weapons/sword-great.png"
+    },
+    {
+        "name": "Throwing Knives",
+        "permission": {
+            "default": 0
+        },
+        "type": "weapon",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 20,
+            "usageDie": null,
+            "damageDice": "1d4",
+            "hands": 1,
+            "rangeType": "both",
+            "rangeDistance": "faraway",
+            "damageType": "piercing"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/weapons/throwing-knives.jpg"
+    }
 ]
