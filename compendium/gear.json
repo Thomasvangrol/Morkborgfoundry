@@ -1,12 +1,1039 @@
 [
     {
-        "name": "",
+        "name": "Bear trap",
         "permission": {
             "default": 0
         },
-        "type": "",
-        "data": {},
+        "type": "gear",
+        "data": {
+            "description": "PRESENCE DR14 to spot, d8 damage",
+            "slots": 1,
+            "silver": 20,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
         "flags": {},
-        "img": "systems/morkborg/icons/items/gear/x.png"
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Blanket",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "A night's rest heals at +1 (Bedroll OR Blanket)",
+            "slots": 1,
+            "silver": 4,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Caltrops",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "d4 damage + infection on 1 in 6",
+            "slots": 0,
+            "silver": 7,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Chalk",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0,
+            "silver": 1,
+            "usageDie": "Ud8",
+            "quantity": 1,
+            "usageDieType": "uses"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Pipe & tobacco",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0,
+            "silver": 1,
+            "usageDie": "Ud6",
+            "quantity": 1,
+            "usageDieType": "uses"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/pipe.jpg"
+    },
+    {
+        "name": "Crowbar",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "Damage as a club (1d6)",
+            "slots": 1,
+            "silver": 8,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Crucifix, silver",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0,
+            "silver": 60,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Crucifix, wood",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0,
+            "silver": 8,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Dried food",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 1,
+            "usageDie": "Ud4",
+            "quantity": 1,
+            "usageDieType": "days of food"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Exquisite perfume",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0,
+            "silver": 25,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Firesteel",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0,
+            "silver": 4,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Grappling hook",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 12,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Hammer",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 8,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/hammer.jpg"
+    },
+    {
+        "name": "Heavy chain",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "15 feet",
+            "slots": 1,
+            "silver": 10,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Iron nails",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "10 nails",
+            "slots": 0,
+            "silver": 5,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Ladder",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 2,
+            "silver": 7,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Lantern & oil",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 5,
+            "usageDie": "Ud6",
+            "quantity": 1,
+            "usageDieType": "hours of light"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/lantern.jpg"
+    },
+    {
+        "name": "Lock",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0,
+            "silver": 55,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/lock.jpg"
+    },
+    {
+        "name": "Lard",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "May function as food",
+            "slots": 1,
+            "silver": 5,
+            "usageDie": "Ud6",
+            "quantity": 1,
+            "usageDieType": "days of food"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Large iron hook",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 9,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/tool-hook.jpg"
+    },
+    {
+        "name": "Lockpicks",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0,
+            "silver": 5,
+            "usageDie": "Ud12",
+            "quantity": 1,
+            "usageDieType": "uses"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/lockpick.jpg"
+    },
+    {
+        "name": "Magnesium strip",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0,
+            "silver": 4,
+            "usageDie": "Ud4",
+            "quantity": 1,
+            "usageDieType": "uses"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Manacles",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 10,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Bedroll",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "A night's rest heals at +1 (Bedroll OR Blanket)",
+            "slots": 1,
+            "silver": 3,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Meat cleaver",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "Damage as an axe (d6)",
+            "slots": 1,
+            "silver": 15,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Medicine bag",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "Stops bleeding/infection and +d6 HP.",
+            "slots": 1,
+            "silver": 15,
+            "usageDie": "Ud6",
+            "quantity": 1,
+            "usageDieType": "uses"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/herb-bag.jpg"
+    },
+    {
+        "name": "Metal file",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0,
+            "silver": 10,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Mirror",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0.5,
+            "silver": 15,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Poison (black)",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "TOUGHNESS DR14 or d6 damage + blind for one hour.",
+            "slots": 1,
+            "silver": 20,
+            "usageDie": "Ud4",
+            "quantity": 1,
+            "usageDieType": "uses"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Poison (red)",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "TOUGHNESS DR12 or d10 damage.",
+            "slots": 1,
+            "silver": 20,
+            "usageDie": "Ud4",
+            "quantity": 1,
+            "usageDieType": "uses"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Rope",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "30 feet",
+            "slots": 1,
+            "silver": 4,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/rope.jpg"
+    },
+    {
+        "name": "Tent",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "A night's rest heals at +1",
+            "slots": 1,
+            "silver": 12,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Toolbox",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "10 nails, hammer, small saw, tongs",
+            "slots": 2,
+            "silver": 20,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Torch",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 2,
+            "usageDie": "Ud6",
+            "quantity": 1,
+            "usageDieType": "hours of light"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/torch.jpg"
+    },
+    {
+        "name": "Salt",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0,
+            "silver": 4,
+            "usageDie": "Ud8",
+            "quantity": 1,
+            "usageDieType": "uses"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Scissors",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0,
+            "silver": 9,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Sharp needle",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0,
+            "silver": 3,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Waterskin",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 4,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/waterskin.jpg"
+    },
+    {
+        "name": "Bomb",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "Sealed Bottle, d10 Damage",
+            "slots": 0.5,
+            "silver": null,
+            "usageDie": null,
+            "quantity": 20,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "10ft Pole",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 2,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Net",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 4,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/net.jpg"
+    },
+    {
+        "name": "Tinderbox",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0.5,
+            "silver": 2,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Shovel",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 6,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Fishing Rod",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 5,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Grease",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 2,
+            "usageDie": "Ud6",
+            "quantity": 1,
+            "usageDieType": "uses"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Card deck and Dice",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0.5,
+            "silver": 15,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Life Elixir",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "Heals d6 HP And Removes Infection",
+            "slots": 0.5,
+            "silver": 100,
+            "usageDie": "Ud6",
+            "quantity": 1,
+            "usageDieType": "doses"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Candles",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 10,
+            "usageDie": "Ud4",
+            "quantity": 5,
+            "usageDieType": "hours of light"
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Bucket",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 10,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Pick",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "d4 damage",
+            "slots": 1,
+            "silver": 8,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/pickaxe.jpg"
+    },
+    {
+        "name": "Cook Pots",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "Whole group heals at +1 on long rests",
+            "slots": 1,
+            "silver": 10,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Whistle",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0,
+            "silver": 10,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Spyglass",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 100,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Twine",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "20 ft",
+            "slots": 0,
+            "silver": 2,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Marbles",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0.5,
+            "silver": 5,
+            "usageDie": null,
+            "quantity": 20,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/generic.jpg"
+    },
+    {
+        "name": "Flute",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0.5,
+            "silver": 25,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/flute.jpg"
+    },
+    {
+        "name": "Lute",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 225,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/lute.jpg"
+    },
+    {
+        "name": "Horn",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 1,
+            "silver": 15,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/horn.jpg"
+    },
+    {
+        "name": "Horseshoe",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0.5,
+            "silver": 2,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/horseshoe.jpg"
+    },
+    {
+        "name": "Paper",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0,
+            "silver": 25,
+            "usageDie": null,
+            "quantity": 10,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/paper.jpg"
+    },
+    {
+        "name": "Soap",
+        "permission": {
+            "default": 0
+        },
+        "type": "gear",
+        "data": {
+            "description": "",
+            "slots": 0,
+            "silver": 2,
+            "usageDie": null,
+            "quantity": 1,
+            "usageDieType": null
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/items/gear/soap.jpg"
     }
 ]
