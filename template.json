@@ -20,18 +20,20 @@
     "npc": {
       "templates": ["base"],
       "morale": {
-        "value": 1,
+        "value": 5,
         "min": 0,
         "max": 12
       },
       "defence": {
         "description": "",
-        "defenceDice": ""
+        "defenceDice": "1d2"
       },
       "attack": {
         "description": "",
-        "ranged": false,
-        "damageDice": 4
+        "rangeType": "ranged|melee|both",
+        "rangeDistance": "close|nearby|faraway",
+        "damageType": "piercing|bludgeoning|slashing|magical",
+        "damageDice": "1d4"
       },
       "special": ""
     },
@@ -75,7 +77,7 @@
     }
   },
   "Item": {
-    "types": ["gear", "scroll", "weapon", "armor", "container", "class", "ability", "origin"],
+    "types": ["gear", "scroll", "weapon", "ammo", "armor", "container", "class", "ability", "origin"],
     "templates": {
       "base": {
         "description": "",
@@ -83,27 +85,38 @@
         "silver": 0
       },
       "consumable": {
-        "usageDie": "Ud4"
+        "usageDie": "Ud4",
+        "usageDieType": ""
+      },
+      "lightSource": {
+        "lightRadius": 0,
+        "lightStrength": 0
       }
     },
     "gear": {
-      "templates": ["base", "consumable"],
+      "templates": ["base", "consumable", "lightSource"],
       "quantity": 1
     },
     "scroll": {
       "templates": ["base"],
-      "scrollType": null
+      "scrollType": "unclean|sacred"
     },
     "weapon": {
-      "templates": ["base", "consumable"],
+      "templates": ["base", "consumable", "lightSource"],
       "damageDice": "1d4",
       "hands": 1,
-      "range": "",
-      "rangeDistaind": "",
-      "damageType": ""
+      "rangeType": "ranged|melee|both",
+      "rangeDistance": "close|nearby|faraway",
+      "damageType": "piercing|bludgeoning|slashing|magical"
+    },
+    "ammo": {
+      "templates": ["base", "consumable"],
+      "damageAdj": 0,
+      "rangeAdj": 0,
+      "damageType": "piercing|bludgeoning|slashing|magical"
     },
     "armor": {
-      "templates": ["base"],
+      "templates": ["base", "lightSource"],
       "tier": 1,
       "damageReductionDice": "1d2",
       "agilityPenalty": 0,
@@ -115,15 +128,15 @@
     },
     "class": {
       "description": "",
-      "startingSilver": "",
-      "startingHitDice": "",
-      "omensDice": "",
-      "strMod": "",
-      "agiMod": "",
-      "touMod": "",
-      "preMod": "",
-      "weaponsDice": "",
-      "armorDice": "",
+      "startingSilver": 0,
+      "startingHitDice": "1d6",
+      "omensDice": "1d2",
+      "strMod": 0,
+      "agiMod": 0,
+      "touMod": 0,
+      "preMod": 0,
+      "weaponsDice": "1d4",
+      "armorDice": "1d2",
       "canUseScrolls": true,
       "abilites": [],
       "origins": []
