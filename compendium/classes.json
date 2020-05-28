@@ -1,0 +1,60 @@
+[
+    {
+        "name": "",
+        "permission": {
+            "default": 0
+        },
+        "type": "",
+        "data": {
+            "biography": "",
+            "movement":20,
+            "health": {
+                "value": 1,
+                "min": 0,
+                "max": 1
+            },
+            "currency": {
+                "gp": 0,
+                "sp": 0,
+                "cp": 0
+            },
+            "experiences": 0,
+            "powers": 0,
+            "level": {
+                "value": 1,
+                "min":1,
+                "max":10
+            },
+            "omens": 0,
+            "inventorySlots": {
+                "used":0,
+                "value":0,
+                "max":8
+            },
+            "abilities": {
+                "strength": {
+                    "value": 0,
+                    "min": -3,
+                    "max": 6
+                },
+                "agility": {
+                    "value": 0,
+                    "min": -3,
+                    "max": 6
+                },
+                "presence": {
+                    "value": 0,
+                    "min": -3,
+                    "max": 6
+                },
+                "toughness": {
+                    "value": 0,
+                    "min": -3,
+                    "max": 6
+                }
+            }
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/x/y/z.png"
+    }
+]
