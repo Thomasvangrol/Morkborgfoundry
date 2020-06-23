@@ -1,38 +1,53 @@
 <form class="{{cssClass}}" autocomplete="off">
-    <header class="sheet-header">
-        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
-        <div class="header-fields">
-            <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
-            <div class="grid grid-2col">
-              <div class="resource">
-                <label class="resource-label">Armor Tier</label>
-                  <input type="text" name="data.tier" value="{{data.tier}}" data-dtype="Number"/>
-              </div>
-              <div class="resource">
-                <label class="resource-label">Slots Used</label>
-                  <input type="text" name="data.equipmentSlotsUsed" value="{{data.equipmentSlotsUsed}}" data-dtype="Number"/>
-              </div>
-            </div>
-        </div>
-    </header>
 
-    {{!-- Sheet Tab Navigation --}}
-    <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="description">Description</a>
-        <a class="item" data-tab="attributes">Attributes</a>
-    </nav>
-
+    {{!-- header --}}
+    {{> "systems/morkborg/templates/item/parts/item-header.html"}}
+    
     {{!-- Sheet Body --}}
     <section class="sheet-body">
 
         {{!-- Description Tab --}}
-        <div class="tab" data-group="primary" data-tab="description">
-            {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
-        </div>
+        {{> "systems/morkborg/templates/item/parts/item-description.html"}}
 
         {{!-- Attributes Tab --}}
         <div class="tab attributes" data-group="primary" data-tab="attributes">
-            {{!-- As you add new fields, add them in here! --}}
+            <h1>{{ localize "MB.ItemArmorDetails" }}</h1>
+
+            {{!-- Armor Tier --}}
+            <div>
+                <label>{{localize "MB.ItemArmorTier"}}</label>
+                <select name="data.tier">
+                {{#select data.tier}}
+                    {{#each config.armorTier as |value key|}}
+                    <option value="{{key}}">{{localize value}}</option>
+                    {{/each}}
+                {{/select}}
+                </select>
+            </div>
+
+            <div class="item-group">
+                <label style="font-weight: bold;">{{ localize "MB.ItemArmorDamageReductionDice" }}</label>
+                <span> {{data.damageReductionDice}}</span>
+            </div>
+            
+            {{#if data.agilityPenalty}}
+            <div class="item-group">
+                <label style="font-weight: bold;">{{ localize "MB.ItemArmorAgilityPenalty" }}</label>
+                <span> DR +{{data.agilityPenalty}} on Agility tests</span>
+            </div>
+            {{/if}}
+
+            {{#if data.defencePenalty}}
+            <div class="item-group">
+                <label style="font-weight: bold;">{{ localize "MB.ItemArmorDefencePenalty" }}</label>
+                <span> DR +{{data.defencePenalty}} on Defence tests</span>
+            </div>
+            {{/if}}
+
+            <div>
+                {{!-- Light --}}
+                {{> "systems/morkborg/templates/item/parts/item-light.html"}}
+            </div>
         </div>
     </section>
 </form>

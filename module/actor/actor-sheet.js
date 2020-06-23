@@ -1,3 +1,5 @@
+import { MbClassList } from "../config.js"; 
+
 /**
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
@@ -8,12 +10,13 @@ export class MorkBorgActorSheet extends ActorSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["morkborg", "sheet", "actor"],
-      template: "systems/morkborg/templates/actor/actor-sheet.html",
       width: 900,
       height: 620,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "class" }]
     });
   }
+
+  /* -------------------------------------------- */
 
   /** @override */
   get template() {
@@ -24,12 +27,19 @@ export class MorkBorgActorSheet extends ActorSheet {
   /* -------------------------------------------- */
 
   /** @override */
-  getData() {
+  async getData() {
     const data = super.getData();
+    const dataActor = data.actor;
+
     data.dtypes = ["String", "Number", "Boolean"];
+
+    // Include CONFIG values
+    data.config = CONFIG.MB;
 
     // Prepare items.
     if (this.actor.data.type == 'character') {
+      dataActor.classNameList = await MbClassList.getClasses(true);
+      dataActor.classObjectList = await MbClassList.getClasses(false);
       this._prepareCharacterItems(data);
     }
     // else if (this.actor.data.type == 'npc') {
@@ -46,9 +56,11 @@ export class MorkBorgActorSheet extends ActorSheet {
    *
    * @return {undefined}
    */
-  _prepareCharacterItems(sheetData) {
-    const actorData = sheetData.actor;
-    
+  _prepareCharacterItems(data) {
+    const dataActor = data.actor;
+
+    this._processClass(data)
+
     // Initialize containers.
     const gears = [];
     const weapons = [];
@@ -61,7 +73,7 @@ export class MorkBorgActorSheet extends ActorSheet {
 
     // Iterate through items, allocating to containers
     // let totalWeight = 0;
-    for (let i of sheetData.items) {
+    for (let i of data.items) {
       let item = i.data;
       i.img = i.img || DEFAULT_TOKEN;
 
@@ -78,12 +90,12 @@ export class MorkBorgActorSheet extends ActorSheet {
       // Append to scrolls.
       else if (i.type === 'scroll') {
         // scrolls.push(i);
-        switch (i.data.scrollType) {
+        switch (item.scrollType) {
           case 'unclean':
-            scrolls[i.data.scrollType].push(i);
+            scrolls[item.scrollType].push(i);
             break;
           case 'sacred':
-            scrolls[i.data.scrollType].push(i);
+            scrolls[item.scrollType].push(i);
             break;
           default:
             scrolls["unknown"].push(i);
@@ -91,17 +103,25 @@ export class MorkBorgActorSheet extends ActorSheet {
         }
       }
       
-      // Append to gears.
+      // Append to gear list.
       else if (i.type === 'gear') {
         gears.push(i);
       }
     }
 
     // Assign and return
-    actorData.gears = gears;
-    actorData.weapons = weapons;
-    actorData.armors = armors;
-    actorData.scrolls = scrolls;
+    dataActor.gears = gears;
+    dataActor.weapons = weapons;
+    dataActor.armors = armors;
+    dataActor.scrolls = scrolls;
+  }
+
+  _processClass(data) {
+    const dataActor = data.actor;
+    const dataData = data.data;
+    
+    const classObj = dataActor.classObjectList.find(classObject => classObject.name === dataData.class.name)
+    dataActor.classObj = classObj ? classObj.data : {}
   }
 
   /** @override */

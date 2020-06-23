@@ -25,6 +25,12 @@ export class MorkBorgItemSheet extends ItemSheet {
   /** @override */
   getData() {
     const data = super.getData();
+
+    // Include CONFIG values
+    data.config = CONFIG.MB;
+
+    data.itemType = data.item.type.titleCase();
+    
     return data;
   }
 

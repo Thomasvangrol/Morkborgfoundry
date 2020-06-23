@@ -1,10 +1,14 @@
 // Import Modules
+import { MB } from "./config.js";
 import { MorkBorgActor } from "./actor/actor.js";
 import { MorkBorgActorSheet } from "./actor/actor-sheet.js";
 import { MorkBorgItem } from "./item/item.js";
 import { MorkBorgItemSheet } from "./item/item-sheet.js";
+import { preloadHandlebarsTemplates } from "./templates.js";
 
 Hooks.once('init', async function() {
+
+  CONFIG.MB = MB;
 
   game.morkborg = {
     MorkBorgActor,
@@ -44,4 +48,7 @@ Hooks.once('init', async function() {
   Handlebars.registerHelper('toLowerCase', function(str) {
     return str.toLowerCase();
   });
+
+  // Preload Handlebars Templates
+  preloadHandlebarsTemplates();
 });

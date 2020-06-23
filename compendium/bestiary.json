@@ -1,0 +1,82 @@
+[
+  {
+      "name": "SETH Goblin",
+      "permission": {
+          "default": 0
+      },
+      "type": "",
+      "data": {
+          "biography": "",
+          "movement":20,
+          "health": {
+              "value": 0,
+              "min": 0,
+              "max": 0
+          },
+          "currency": {
+              "gp": 0,
+              "sp": 0,
+              "cp": 0
+          },
+          "morale": {
+              "value": 5,
+              "min": 0,
+              "max": 12
+            },
+            "defence": {
+              "description": "",
+              "defenceDice": "1d2"
+            },
+            "attack": {
+              "description": "",
+              "rangeType": "ranged|melee|both",
+              "rangeDistance": "close|nearby|faraway",
+              "damageType": "piercing|bludgeoning|slashing|magical",
+              "damageDice": "1d4"
+            },
+            "special": ""
+      },
+      "flags": {},
+      "img": "systems/morkborg/icons/x/y/z.png"
+  },
+  {
+      "name": "",
+      "permission": {
+          "default": 0
+      },
+      "type": "",
+      "data": {
+          "biography": "",
+          "movement":20,
+          "health": {
+              "value": 0,
+              "min": 0,
+              "max": 0
+          },
+          "currency": {
+              "gp": 0,
+              "sp": 0,
+              "cp": 0
+          },
+          "morale": {
+              "value": 5,
+              "min": 0,
+              "max": 12
+            },
+            "defence": {
+              "description": "",
+              "defenceDice": "1d2"
+            },
+            "attack": {
+              "description": "",
+              "rangeType": "ranged|melee|both",
+              "rangeDistance": "close|nearby|faraway",
+              "damageType": "piercing|bludgeoning|slashing|magical",
+              "damageDice": "1d4"
+            },
+            "special": ""
+      },
+      "flags": {},
+      "img": "systems/morkborg/icons/x/y/z.png"
+  }
+]

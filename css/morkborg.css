@@ -1,13 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Martel:wght@400;800&family=Roboto:wght@300;400;500&display=swap");
-/* Global styles */
-.window-app {
-  font-family: "Roboto", sans-serif;
-}
-
-.rollable:hover, .rollable:focus {
-  color: #000;
-  text-shadow: 0 0 10px red;
-  cursor: pointer;
+@import url("https://fonts.googleapis.com/css2?family=Rakkas&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;577&display=swap");
+@font-face {
+  font-family: 'FetteTrumpDeutsch';
+  src: url("../fonts/FetteTrumpDeutsch.ttf") format("truetype");
 }
 
 .grid,
@@ -16,7 +11,6 @@
   grid-column: span 2 / span 2;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
-  margin: 10px 0;
   padding: 0;
 }
 
@@ -116,7 +110,7 @@
 
 /* Styles limited to morkborg sheets */
 .morkborg .item-form {
-  font-family: "Roboto", sans-serif;
+  font-family: "Inconsolata", "Signika", sans-serif;
 }
 
 .morkborg .sheet-header {
@@ -139,31 +133,17 @@
   margin-bottom: 10px;
 }
 
-.morkborg .sheet-header .profile-img {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 100px;
-  flex: 0 0 100px;
-  height: 100px;
-  margin-right: 10px;
-}
-
 .morkborg .sheet-header .header-fields {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.morkborg .sheet-header h1.charname {
-  height: 50px;
-  padding: 0px;
-  margin: 5px 0;
-  border-bottom: 0;
-}
-
-.morkborg .sheet-header h1.charname input {
-  width: 100%;
-  height: 100%;
-  margin: 0;
+.morkborg .profile-img {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100px;
+  flex: 0 0 100px;
+  height: 200px;
 }
 
 .morkborg .sheet-tabs {
@@ -172,33 +152,35 @@
   flex: 0;
 }
 
-.morkborg .sheet-body,
 .morkborg .sheet-body .tab,
 .morkborg .sheet-body .tab .editor {
   height: 100%;
 }
 
-.morkborg .tox .tox-editor-container {
-  background: #fff;
+.morkborg .tabs .item {
+  background: rgba(0, 0, 0, 0.125);
+  border: 1px solid;
+  border-radius: 4px;
+  margin: 0 10px 0;
 }
 
-.morkborg .tox .tox-edit-area {
-  padding: 0 8px;
+.morkborg .tabs .item:hover, .morkborg .tabs .item:focus {
+  background: white;
+  color: #000;
 }
 
-.morkborg .resource-label {
-  font-weight: bold;
-  text-transform: uppercase;
+.morkborg .tabs .item.active {
+  background: #ffe72e;
+  color: black;
 }
 
 .morkborg .tabs {
-  height: 40px;
-  border-top: 1px solid #AAA;
   border-bottom: 1px solid #AAA;
+  padding-bottom: 10px;
 }
 
 .morkborg .tabs .item {
-  line-height: 40px;
+  line-height: 30px;
   font-weight: bold;
 }
 
@@ -214,15 +196,11 @@
   overflow-y: auto;
 }
 
-.morkborg .items-list .item-header {
-  font-weight: bold;
-}
-
 .morkborg .items-list .item {
   height: 30px;
   line-height: 24px;
-  padding: 3px 0;
-  border-bottom: 1px solid #BBB;
+  padding: 3px 20px;
+  border-bottom: 1px solid #ffffff18;
 }
 
 .morkborg .items-list .item .item-image {
@@ -234,6 +212,20 @@
 
 .morkborg .items-list .item img {
   display: block;
+  border: none;
+}
+
+.morkborg .items-list .item-header {
+  font-weight: bold;
+  color: #ffe72e;
+  background-color: #ffffff18;
+  border: none;
+  padding: 3px 10px;
+  margin-top: 10px;
+}
+
+.morkborg .items-list .item-header .item-name {
+  font-family: "Rakkas", cursive, serif;
 }
 
 .morkborg .items-list .item-name {
@@ -242,7 +234,189 @@
 
 .morkborg .items-list .item-controls {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 186px;
-  flex: 0 0 186px;
+  -ms-flex: 0 0 200px;
+  flex: 0 0 200px;
   text-align: right;
+}
+
+.morkborg .items-list .item-controls .item-control {
+  color: #f142af;
+}
+
+.morkborg .items-list .item-controls .item-control:hover, .morkborg .items-list .item-controls .item-control:focus {
+  color: white;
+  text-shadow: 0 0 10px #f142af;
+  cursor: pointer;
+}
+
+.morkborg .item-group {
+  padding: 10px;
+}
+
+.morkborg .char-sheet {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr 1fr 1fr;
+  grid-template-rows: 180px 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "left-column header header header header" "left-column content content content content" "left-column content content content content" "left-column content content content content";
+  height: 100%;
+}
+
+.morkborg .char-sheet .left-column {
+  grid-area: left-column;
+  border-right: 1px solid #ffe72e;
+  padding: 10px 20px;
+  height: 100%;
+}
+
+.morkborg .char-sheet .left-column .left-column-title {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.morkborg .char-sheet .left-column .left-column-input {
+  min-height: 40px;
+}
+
+.morkborg .char-sheet .header {
+  grid-area: header;
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.morkborg .char-sheet .header .header-item {
+  margin-bottom: 10px;
+}
+
+.morkborg .char-sheet .content {
+  grid-area: content;
+  padding: 10px;
+}
+
+.morkborg .ability {
+  margin-bottom: 10px;
+}
+
+.morkborg .mb-label {
+  text-transform: uppercase;
+  font-family: "Rakkas", cursive, serif;
+}
+
+.morkborg .small-input {
+  max-width: 60px;
+}
+
+.morkborg .charname {
+  height: 50px;
+  padding: 0px;
+  margin: 5px 0;
+  border-bottom: none;
+  font-size: 25px;
+}
+
+.morkborg .charname input {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  margin: 0;
+  text-align: left;
+}
+
+.morkborg .class-grid {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 125px 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "class-img class-abilities class-items class-items" "class-content class-content class-content class-content" "class-content class-content class-content class-content";
+  height: 100%;
+}
+
+.morkborg .class-grid .class-content {
+  grid-area: class-content;
+}
+
+.morkborg .class-grid .class-img {
+  grid-area: class-img;
+}
+
+.morkborg .class-grid .class-abilities {
+  grid-area: class-abilities;
+}
+
+.morkborg .class-grid .class-abilities .class-ability-mod {
+  text-align: center;
+}
+
+.morkborg .class-grid .class-items {
+  grid-area: class-items;
+}
+
+.morkborg .window-content {
+  background: black;
+  color: white;
+}
+
+.morkborg .rollable {
+  color: #f142af;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.morkborg .rollable:hover, .morkborg .rollable:focus {
+  color: white;
+  text-shadow: 0 0 10px #f142af;
+  cursor: pointer;
+}
+
+.morkborg body {
+  font-family: "Inconsolata", "Signika", sans-serif;
+  color: white;
+}
+
+.morkborg label {
+  font-weight: bold;
+  text-transform: capitalize;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.morkborg h1 {
+  border-bottom: none;
+  font-family: "FetteTrumpDeutsch", fantasy, serif;
+  font-size: 30px;
+  color: #ffe72e;
+}
+
+.morkborg h2 {
+  border-bottom: none;
+  font-family: "Rakkas", cursive, serif;
+  font-size: 15px;
+  color: #ffe72e;
+  margin-top: 15px;
+}
+
+.morkborg input {
+  text-align: center;
+  background: black;
+  color: white;
+  border: 1px solid #ffe72e;
+}
+
+.morkborg select {
+  height: 25px;
+  background: black;
+  border: 1px solid #ffe72e;
+  border-radius: 3px;
+  padding: 0 3px;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  color: white;
+}
+
+.morkborg select option {
+  margin: 40px;
+  background: black;
+  color: white;
+  text-shadow: 0 1px 0 #f142af;
 }
