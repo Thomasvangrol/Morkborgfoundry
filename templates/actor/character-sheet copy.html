@@ -1,0 +1,268 @@
+<form class="{{cssClass}} flex  col" autocomplete="off">
+
+    {{!-- Sheet Header --}}
+    <header class="sheet-header">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+        <div class="header-fields">
+            <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+
+            <div class="grid grid-2col">
+              <div class="flex-group-center">
+                  <label for="data.health.value">Health</label>
+                  <div class="flexrow flex-center flex-between">
+                    <input type="text" name="data.health.value" value="{{data.health.value}}" data-dtype="Number"/>
+                    <span> / </span>
+                    <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number"/>
+                  </div>
+              </div>
+
+              <div class="flex-group-center">
+                  <label for="data.omens">Omens</label>
+                  <div class="flexrow flex-center flex-between">
+                    <input type="text" name="data.omens" value="{{data.omens}}" data-dtype="Number"/>
+                  </div>
+              </div>
+          </div>
+
+          <div class="abilities grid grid-2col">
+            {{#each data.abilities as |ability key|}}
+              <div class="ability flexrow flex-group-center">
+                <label for="data.abilities.{{key}}.value">{{key}}</label>
+                <div class="flexrow flex-center flex-between">
+                  <input type="text" name="data.abilities.{{key}}.value" value="{{numberFormat ability.value decimals=0 sign=true}}" data-dtype="Number"/>
+                  <span class="ability-roll rollable" data-roll="d20+@abilities.{{key}}.value" data-label="{{key}}">Roll</span>
+                </div>
+              </div>
+            {{/each}}
+          </div>
+        </div>
+    </header>
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="class">Class</a>
+        <a class="item" data-tab="items">Items</a>
+        <a class="item" data-tab="scrolls">Scrolls</a>
+        <a class="item" data-tab="description">Description</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Class Tab --}}
+        <div class="tab class" data-group="primary" data-tab="class">
+
+            <div class="grid grid-3col">
+              <div class="flexrow flex-center flex-between">
+                  <select name="data.class.name" data-type="String">
+                  {{#select data.class.name}}
+                      {{#each actor.classNameList}}
+                      <option value="{{this}}">{{this}}</option>
+                      {{/each}}
+                  {{/select}}
+                  </select>
+              </div>
+
+              <div class="flexrow flex-center flex-between">
+                <label for="data.level.value">Level</label>
+                <input type="text" name="data.level.value" value="{{data.level.value}}" data-dtype="Number"/>
+              </div>
+              
+              <div class="flexrow flex-center flex-between">
+                <label for="data.experiences">Experiences</label>
+                <input type="text" name="data.experiences" value="{{data.experiences}}" data-dtype="Number"/>
+              </div>
+            </div>
+
+            <img src="{{actor.classObj.img}}" title="{{actor.classObj.name}}" height="100" width="100"/>
+            
+            <label>Class Ability Modifiers</label>
+            <div class="grid grid-4col flex-group-left">
+              <div class="grid grid-2col">
+                <div>{{ localize "MB.AbilityStr" }}:</div>
+                <span>{{actor.classObj.data.startingInfo.strMod}}</span>
+              </div>
+              <div class="grid grid-2col">
+                <div>{{ localize "MB.AbilityAgi" }}:</div>
+                <span>{{actor.classObj.data.startingInfo.agiMod}}</span>
+              </div>
+              <div class="grid grid-2col">
+                <div>{{ localize "MB.AbilityPre" }}:</div>
+                <span>{{actor.classObj.data.startingInfo.preMod}}</span>
+              </div>
+              <div class="grid grid-2col">
+                <div>{{ localize "MB.AbilityTou" }}:</div>
+                <span>{{actor.classObj.data.startingInfo.touMod}}</span>
+              </div>
+            </div>
+
+            <div>
+              <label>Description</label>
+              <span>{{actor.classObj.data.description}}</span>
+            </div>
+
+            <div>
+              <label>Class Attributes</label>
+              <ul>
+              {{#each actor.classObj.data.modifiers}}
+                <li>{{this}}</li>
+              {{/each}}
+              </ul>
+            </div>
+
+            <div>
+              <label>{{ localize "MB.ClassWeaponTableDice" }}:</label>
+              <span>{{actor.classObj.data.startingInfo.weaponsDice}}</span>
+            </div>
+
+            <div>
+              <label>{{ localize "MB.ClassArmorTableDice" }}:</label>
+              <span>{{actor.classObj.data.startingInfo.armorDice}}</span>
+            </div>
+
+            <div>
+              <label>{{ localize "MB.ClassStartingSilver" }}</label>
+              <span>{{actor.classObj.data.startingInfo.startingSilverDice}} x {{actor.classObj.data.startingInfo.startingSilverMod}}</span>
+            </div>
+
+            <div>
+              <label>Omens Dice</label>
+              <span>{{actor.classObj.data.omensDice}}</span>
+            </div>
+
+            <div>
+              <label>Can Use Scrolls</label>
+              <span>{{actor.classObj.data.canUseScrolls}}</span>
+            </div>
+
+            <div>
+              <label>{{ localize "MB.ClassSource" }}</label>
+              <span>{{actor.classObj.data.source}}</span>
+            </div>
+            
+            <div>
+              <label>{{ localize "MB.ClassStartingHP" }}</label>
+              <span>{{actor.classObj.data.startingInfo.startingHitPointDice}}</span> + <span>{{actor.classObj.data.startingInfo.startingHitPointAtt}}</span>
+            </div>
+
+            <div>
+              <label>{{ localize "MB.ClassAbilities" }}</label>
+              <h3>{{actor.classObj.data.startingInfo.abilities.description}}</h3>
+              <ul>
+              {{#each actor.classObj.data.startingInfo.abilities.options}}
+                <li>{{this}}</li>
+              {{/each}}
+              </ul>
+            </div>
+
+            <div>
+              <label>{{ localize "MB.ClassOrigins" }}</label>
+              <h3>{{actor.classObj.data.startingInfo.origins.description}}</h3>
+              <ul>
+              {{#each actor.classObj.data.startingInfo.origins.options}}
+                <li>{{this}}</li>
+              {{/each}}
+              </ul>
+            </div>
+        </div>
+
+        {{!-- Owned Items Tab --}}
+        <div class="tab items" data-group="primary" data-tab="items">
+
+          <!-- Weapons -->
+          <ol class="items-list">
+            <li class="item flexrow item-header">
+              <div class="item-image header-image"><img src="systems/morkborg/icons/ui/catagory-weapons.svg" title="Weapons" width="24" height="24"/></div>
+              <div class="item-name">Weapons</div>
+              <div class="item-controls">
+                <a class="item-control item-create" title="Create weapon" data-type="weapon"><i class="fas fa-plus"></i> Add Weapon</a>
+              </div>
+            </li>
+            {{#each actor.weapons as |item id|}}
+                <li class="item flexrow" data-item-id="{{item._id}}">
+                    <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+                    <h4 class="item-name">{{item.name}}</h4>
+                    <div class="item-controls">
+                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                    </div>
+                </li>
+            {{/each}}
+            </ol>
+
+            <!-- Armor -->
+            <ol class="items-list">
+              <li class="item flexrow item-header">
+                <div class="item-image header-image"><img src="systems/morkborg/icons/ui/catagory-armor.svg" title="Armor" width="24" height="24"/></div>
+                <div class="item-name">Armor</div>
+                <div class="item-controls">
+                  <a class="item-control item-create" title="Create armor" data-type="armor"><i class="fas fa-plus"></i> Add Armor</a>
+                </div>
+              </li>
+              {{#each actor.armors as |item id|}}
+                  <li class="item flexrow" data-item-id="{{item._id}}">
+                      <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+                      <h4 class="item-name">{{item.name}}</h4>
+                      <div class="item-controls">
+                          <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                          <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                      </div>
+                  </li>
+              {{/each}}
+            </ol>
+
+            <!-- Items -->
+            <ol class="items-list">
+              <li class="item flexrow item-header">
+                <div class="item-image header-image"><img src="systems/morkborg/icons/ui/catagory-gear.svg" title="Gear" width="24" height="24"/></div>
+                <div class="item-name">Gear</div>
+                <div class="item-controls">
+                  <a class="item-control item-create" title="Create item" data-type="gear"><i class="fas fa-plus"></i> Add Gear</a>
+                </div>
+              </li>
+              {{#each actor.gears as |item id|}}
+                  <li class="item flexrow" data-item-id="{{item._id}}">
+                      <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+                      <h4 class="item-name">{{item.name}}</h4>
+                      <div class="item-controls">
+                          <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                          <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                      </div>
+                  </li>
+              {{/each}}
+            </ol>
+        </div>
+
+        {{!-- Owned Scrolls Tab --}}
+        <div class="tab scrolls" data-group="primary" data-tab="scrolls">
+            <ol class="items-list">
+                {{#each actor.scrolls as |scrolls scrollType|}}
+                    <li class="item flexrow item-header">
+                      <div class="item-image header-image"><img src="systems/morkborg/icons/ui/catagory-scrolls.svg" title="scrolls" width="24" height="24"/></div>
+                      <div class="item-name">{{scrollType}} Scrolls</div>
+                      <div class="item-controls">
+                        <a class="item-control item-create" title="Create scroll" data-type="scroll" data-scroll-type="{{scrollType}}"><i class="fas fa-plus"></i> Add {{scrollType}} Scroll</a>
+                      </div>
+                    </li>
+                    {{#each scrolls as |item id|}}
+                        <li class="item flexrow" data-item-id="{{item._id}}">
+                            <div class="item-image"><img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/></div>
+                            <h4 class="item-name">{{item.name}}</h4>
+                            <div class="item-controls">
+                                <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                                <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                            </div>
+                        </li>
+                    {{/each}}
+                {{/each}}
+            </ol>
+        </div>
+
+        {{!-- Biography Tab --}}
+        <div class="tab biography" data-group="primary" data-tab="description">
+            {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+        </div>
+
+    </section>
+</form>
+
