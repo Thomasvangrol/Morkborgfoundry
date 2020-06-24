@@ -2,8 +2,9 @@
   "name": "morkborg",
   "title": "Mork Borg",
   "description": "The Mork Borg system for FoundryVTT!",
-  "version": "1.0.0",
+  "version": 0.01,
   "compatibleCoreVersion": "0.6.2",
+  "minimumCoreVersion": "0.6.0",
   "templateVersion": 2,
   "author": "Joseph Hopson",
   "esmodules": ["module/morkborg.js"],
@@ -77,9 +78,9 @@
   "gridDistance": 5,
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",
-  "secondaryTokenAttribute": "",
-  "url": "https://gitlab.com/philote/foundry-mork-borg",
-  "manifest": "https://gitlab.com/philote/foundry-mork-borg/-/raw/master/system.json",
-  "download": "",
-  "license": ""
+  "secondaryTokenAttribute": null,
+  "url": "https://gitlab.com/foundryvtt-mods/morkborg",
+  "manifest": "https://gitlab.com/foundryvtt-mods/morkborg/raw/0.0.1/system.json",
+  "download": "https://gitlab.com/foundryvtt-mods/morkborg/-/archive/0.0.1/morkborg-0.0.1.zip",
+  "license": null
 }
