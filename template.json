@@ -6,9 +6,9 @@
         "biography": "",
         "movement":20,
         "health": {
-          "value": 10,
+          "value": 0,
           "min": 0,
-          "max": 10
+          "max": 0
         },
         "currency": {
           "gp": 0,
@@ -20,7 +20,7 @@
     "npc": {
       "templates": ["base"],
       "morale": {
-        "value": 5,
+        "value": 0,
         "min": 0,
         "max": 12
       },
@@ -30,10 +30,10 @@
       },
       "attack": {
         "description": "",
-        "rangeType": "ranged|melee|both",
-        "rangeDistance": "close|nearby|faraway",
-        "damageType": "piercing|bludgeoning|slashing|magical",
-        "damageDice": "1d4"
+        "rangeType": "",
+        "rangeDistance": "",
+        "damageType": "",
+        "damageDice": ""
       },
       "special": ""
     },
@@ -50,7 +50,7 @@
       "inventorySlots": {
         "used":0,
         "value":0,
-        "max":8
+        "max":20
       },
       "abilities": {
         "strength": {
@@ -73,24 +73,35 @@
           "min": -3,
           "max": 6
         }
+      },
+      "class": {
+        "name": "",
+        "abilities": [],
+        "origins": []
       }
     }
   },
   "Item": {
-    "types": ["gear", "scroll", "weapon", "ammo", "armor", "container", "class", "ability", "origin"],
+    "types": ["gear", "scroll", "weapon", "ammo", "armor", "class"],
     "templates": {
       "base": {
         "description": "",
-        "slots": 1,
+        "encumbrance": {
+          "sacks": 0,
+          "stones": 0,
+          "soaps": 0
+        },
         "silver": 0
       },
       "consumable": {
-        "usageDie": "Ud4",
-        "usageDieType": ""
+        "isConsumable": false,
+        "usageDie": null,
+        "usageDieType": null
       },
       "lightSource": {
-        "lightRadius": 0,
-        "lightStrength": 0
+        "hasLight": false,
+        "lightRadius": null,
+        "lightStrength": null
       }
     },
     "gear": {
@@ -99,53 +110,55 @@
     },
     "scroll": {
       "templates": ["base"],
-      "scrollType": "unclean|sacred"
+      "scrollType": ""
     },
     "weapon": {
       "templates": ["base", "consumable", "lightSource"],
-      "damageDice": "1d4",
+      "damageDice": "",
       "hands": 1,
-      "rangeType": "ranged|melee|both",
-      "rangeDistance": "close|nearby|faraway",
-      "damageType": "piercing|bludgeoning|slashing|magical"
+      "rangeType": "",
+      "rangeDistance": "",
+      "damageType": ""
     },
     "ammo": {
-      "templates": ["base", "consumable"],
+      "templates": ["base", "consumable", "lightSource"],
       "damageAdj": 0,
       "rangeAdj": 0,
-      "damageType": "piercing|bludgeoning|slashing|magical"
+      "damageType": ""
     },
     "armor": {
       "templates": ["base", "lightSource"],
-      "tier": 1,
-      "damageReductionDice": "1d2",
-      "agilityPenalty": 0,
-      "defencePenalty": 0
-    },
-    "container": {
-      "templates": ["base"],
-      "capacity": 5
+      "tier": null,
+      "damageReductionDice": "",
+      "agilityPenalty": null,
+      "defencePenalty": null
     },
     "class": {
+      "source": "custom",
       "description": "",
-      "startingSilver": 0,
-      "startingHitDice": "1d6",
       "omensDice": "1d2",
-      "strMod": 0,
-      "agiMod": 0,
-      "touMod": 0,
-      "preMod": 0,
-      "weaponsDice": "1d4",
-      "armorDice": "1d2",
       "canUseScrolls": true,
-      "abilites": [],
-      "origins": []
-    },
-    "ability": {
-      "description": ""
-    },
-    "origin": {
-      "description": ""
+      "modifiers": [],
+      "startingInfo": {
+        "startingSilverDice": "2d6",
+        "startingSilverMod": "10",
+        "startingHitPointDice": "1d8",
+        "startingHitPointAtt": "toughness",
+        "strMod": null,
+        "agiMod": null,
+        "preMod": null,
+        "touMod": null,
+        "weaponsDice": "1d10",
+        "armorDice": "1d4",
+        "abilities": {
+          "description": "",
+          "options": []
+        },
+        "origins": {
+          "description": "",
+          "options": []
+        }
+      }
     }
   }
 }
