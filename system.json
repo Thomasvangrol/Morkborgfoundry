@@ -79,7 +79,7 @@
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "",
   "url": "https://gitlab.com/philote/foundry-mork-borg",
-  "manifest": "https://gitlab.com/philote/foundry-mork-borg/-/raw/master/system.json",
-  "download": "",
+  "manifest": "https://gitlab.com/philote/foundry-mork-borg/-/raw/develop/system.json",
+  "download": "https://gitlab.com/philote/foundry-mork-borg/-/archive/develop/foundry-mork-borg-develop.zip",
   "license": ""
 }
