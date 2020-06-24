@@ -1,5 +1,5 @@
 {
-  "name": "foundry-mork-borg",
+  "name": "morkborg",
   "title": "Mork Borg",
   "description": "The Mork Borg system for FoundryVTT!",
   "version": "1.0.0",
@@ -78,8 +78,8 @@
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "",
-  "url": "https://gitlab.com/philote/foundry-mork-borg",
-  "manifest": "https://gitlab.com/philote/foundry-mork-borg/-/raw/develop/system.json",
-  "download": "https://gitlab.com/philote/foundry-mork-borg/-/archive/develop/foundry-mork-borg-develop.zip",
+  "url": "",
+  "manifest": "",
+  "download": "",
   "license": ""
 }
