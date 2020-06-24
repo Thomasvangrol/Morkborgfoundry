@@ -3,7 +3,7 @@
   "title": "Mork Borg",
   "description": "The Mork Borg system for FoundryVTT!",
   "version": "1.0.0",
-  "compatibleCoreVersion": "0.5.7",
+  "compatibleCoreVersion": "0.6.2",
   "templateVersion": 2,
   "author": "Joseph Hopson",
   "esmodules": ["module/morkborg.js"],
@@ -43,35 +43,11 @@
       "entity": "Item"
     },
     {
-      "name": "containers",
-      "label": "Containers",
-      "system": "morkborg",
-      "module": "morkborg",
-      "path": "./packs/containers.db",
-      "entity": "Item"
-    },
-    {
       "name": "classes",
       "label": "Classes",
       "system": "morkborg",
       "module": "morkborg",
       "path": "./packs/classes.db",
-      "entity": "Item"
-    },
-    {
-      "name": "abilities",
-      "label": "Abilities",
-      "system": "morkborg",
-      "module": "morkborg",
-      "path": "./packs/abilities.db",
-      "entity": "Item"
-    },
-    {
-      "name": "origins",
-      "label": "origins",
-      "system": "morkborg",
-      "module": "morkborg",
-      "path": "./packs/origins.db",
       "entity": "Item"
     },
     {
