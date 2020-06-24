@@ -2,7 +2,7 @@
   "name": "morkborg",
   "title": "Mork Borg",
   "description": "The Mork Borg system for FoundryVTT!",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "compatibleCoreVersion": "0.6.2",
   "templateVersion": 2,
   "author": "Joseph Hopson",
@@ -78,8 +78,8 @@
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "",
-  "url": "",
-  "manifest": "",
-  "download": "",
+  "url": "https://gitlab.com/philote/morkborg",
+  "manifest": "https://gitlab.com/philote/morkborg/-/raw/develop/system.json",
+  "download": "https://gitlab.com/philote/morkborg/-/archive/develop/morkborg-develop.zip",
   "license": ""
 }
