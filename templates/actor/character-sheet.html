@@ -173,24 +173,24 @@
 
               <h2>{{ localize "MB.ClassAbilities" }}</h2>
               <h3>{{actor.classObj.data.startingInfo.abilities.description}}</h3>
-              <ul>
               {{#each actor.classObj.data.startingInfo.abilities.options}}
-                <li>{{this}}</li>
+                <div class="grid-container">
+                  <input class="check-box" type="checkbox" id="{{@index}}">
+                  <label class="desc" for="{{@index}}">{{this}}</label>
+                </div>
               {{/each}}
-              </ul>
 
               <h2>{{ localize "MB.ClassOrigins" }}</h2>
               <h3>{{actor.classObj.data.startingInfo.origins.description}}</h3>
-              <ul>
               {{#each actor.classObj.data.startingInfo.origins.options}}
-                <li>{{this}}</li>
+                <div class="grid-container">
+                  <input class="check-box" type="checkbox" id="{{@index}}">
+                  <label class="desc" for="{{@index}}">{{this}}</label>
+                </div>
               {{/each}}
-              </ul>
+
             </div>
-            
           </div>
-
-
         </div>
 
         {{!-- Owned Items Tab --}}

@@ -36,6 +36,25 @@
         grid-area: content; 
         padding: 10px;
     }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 1fr;
+        gap: 1px 1px;
+        grid-template-areas: "check-box desc";
+
+        .check-box { 
+            grid-area: check-box; 
+        }
+    
+        .desc { 
+            grid-area: desc; 
+            margin-bottom: 5px;
+        }
+    }
+      
+
 }
 
 .ability {

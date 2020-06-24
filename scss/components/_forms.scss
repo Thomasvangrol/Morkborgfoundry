@@ -25,7 +25,16 @@
   flex: 0;
 }
 
+.sheet-body,
 .sheet-body .tab,
 .sheet-body .tab .editor {
   height: 100%;
+}
+
+.mce-content-body {
+  color: white;
+
+  p {
+    color: white;
+  }
 }

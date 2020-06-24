@@ -1,9 +1,13 @@
 .tabs {
+  // background: rgb(40, 40, 40);
+  
   .item {
-    background: rgba(0, 0, 0, 0.125);
+    background: rgba(255, 255, 255, 0.125);
     border: 1px solid;
     border-radius: 4px;
     margin: 0 10px 0;
+    line-height: 30px;
+    font-weight: bold;
 
     &:hover,
     &:focus {
@@ -14,21 +18,8 @@
     &.active {
       background: $mb-yellow;
       color: $mb-black;
+      text-decoration: underline;
+      text-shadow: none;
     }
-  }
-}
-
-.tabs {
-  border-bottom: 1px solid #AAA;
-  padding-bottom: 10px;
-
-  .item {
-    line-height: 30px;
-    font-weight: bold;
-  }
-
-  .item.active {
-    text-decoration: underline;
-    text-shadow: none;
   }
 }

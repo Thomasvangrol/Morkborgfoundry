@@ -152,16 +152,27 @@
   flex: 0;
 }
 
+.morkborg .sheet-body,
 .morkborg .sheet-body .tab,
 .morkborg .sheet-body .tab .editor {
   height: 100%;
 }
 
+.morkborg .mce-content-body {
+  color: white;
+}
+
+.morkborg .mce-content-body p {
+  color: white;
+}
+
 .morkborg .tabs .item {
-  background: rgba(0, 0, 0, 0.125);
+  background: rgba(255, 255, 255, 0.125);
   border: 1px solid;
   border-radius: 4px;
   margin: 0 10px 0;
+  line-height: 30px;
+  font-weight: bold;
 }
 
 .morkborg .tabs .item:hover, .morkborg .tabs .item:focus {
@@ -172,19 +183,6 @@
 .morkborg .tabs .item.active {
   background: #ffe72e;
   color: black;
-}
-
-.morkborg .tabs {
-  border-bottom: 1px solid #AAA;
-  padding-bottom: 10px;
-}
-
-.morkborg .tabs .item {
-  line-height: 30px;
-  font-weight: bold;
-}
-
-.morkborg .tabs .item.active {
   text-decoration: underline;
   text-shadow: none;
 }
@@ -293,6 +291,23 @@
   padding: 10px;
 }
 
+.morkborg .char-sheet .grid-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "check-box desc";
+}
+
+.morkborg .char-sheet .grid-container .check-box {
+  grid-area: check-box;
+}
+
+.morkborg .char-sheet .grid-container .desc {
+  grid-area: desc;
+  margin-bottom: 5px;
+}
+
 .morkborg .ability {
   margin-bottom: 10px;
 }
@@ -353,6 +368,7 @@
 }
 
 .morkborg .window-content {
+  padding: 0px;
   background: black;
   color: white;
 }
