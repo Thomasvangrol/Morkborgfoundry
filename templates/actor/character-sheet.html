@@ -78,6 +78,11 @@
             <label class="mb-label" for="data.omens">Movement:</label>
             <input class="small-input" type="text" name="data.movement" value="{{data.movement}}" data-dtype="Number" placeholder="Coin"/>
           </div>
+
+          <div class="header-item flexrow flex-between">
+            <label class="mb-label" for="data.inventorySlots">Inventory Slots:</label>
+            <span class="small-input">{{data.inventorySlots.value}} / {{data.inventorySlots.max}}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -195,6 +200,22 @@
 
         {{!-- Owned Items Tab --}}
         <div class="tab items" data-group="primary" data-tab="items">
+
+          <div class="grid grid-3col flex" style="text-align: center; margin: 20px 20px 0px 20px;">
+            <div>
+              <label class="mb-label">Sacks:</label>
+              <span style="margin-left: 10px;">{{data.encumbrance.sacks}}</span>
+            </div>
+            <div>
+              <label class="mb-label">Stones:</label>
+              <span style="margin-left: 10px;">{{data.encumbrance.stones}}</span>
+            </div>
+            <div>
+              <label class="mb-label">Soaps:</label>
+              <span style="margin-left: 10px;">{{data.encumbrance.soaps}}</span>
+            </div>
+          </div>
+          
           <!-- Weapons -->
           <ol class="items-list">
             <li class="item flexrow item-header">
@@ -261,6 +282,22 @@
 
         {{!-- Owned Scrolls Tab --}}
         <div class="tab scrolls" data-group="primary" data-tab="scrolls">
+            
+            <div class="grid grid-3col flex" style="text-align: center; margin: 20px 20px 0px 20px;">
+              <div>
+                <label class="mb-label">Sacks:</label>
+                <span style="margin-left: 10px;">{{data.encumbrance.sacks}}</span>
+              </div>
+              <div>
+                <label class="mb-label">Stones:</label>
+                <span style="margin-left: 10px;">{{data.encumbrance.stones}}</span>
+              </div>
+              <div>
+                <label class="mb-label">Soaps:</label>
+                <span style="margin-left: 10px;">{{data.encumbrance.soaps}}</span>
+              </div>
+            </div>
+            
             <ol class="items-list">
                 {{#each actor.scrolls as |scrolls scrollType|}}
                     <li class="item flexrow item-header">

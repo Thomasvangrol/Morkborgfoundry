@@ -58,6 +58,7 @@ export class MorkBorgActorSheet extends ActorSheet {
    */
   _prepareCharacterItems(data) {
     const dataActor = data.actor;
+    const dataData = data.data;
 
     this._processClass(data)
 
@@ -71,11 +72,18 @@ export class MorkBorgActorSheet extends ActorSheet {
       "unknown": []
     }
 
+    let sacks = 0;
+    let stones = 0;
+    let soaps = 0;
+
     // Iterate through items, allocating to containers
-    // let totalWeight = 0;
     for (let i of data.items) {
       let item = i.data;
       i.img = i.img || DEFAULT_TOKEN;
+
+      sacks += item.encumbrance.sacks
+      stones += item.encumbrance.stones
+      soaps += item.encumbrance.soaps
 
       // Append to weapons.
       if (i.type === 'weapon') {
@@ -109,7 +117,24 @@ export class MorkBorgActorSheet extends ActorSheet {
       }
     }
 
+    const totalSoaps = soaps % 100;
+    stones += Math.floor(soaps / 100);
+    const totalStones = stones % 10;
+    const totalSacks = sacks + Math.floor(stones / 10);
+
+    let invSlotsUsed = stones + (sacks * 10);
+
+    if (totalSoaps > 1) {
+      invSlotsUsed ++;
+    }
+
     // Assign and return
+    dataData.inventorySlots.value = invSlotsUsed;
+    dataData.encumbrance.soaps = totalSoaps;
+    dataData.encumbrance.stones = totalStones;
+    dataData.encumbrance.sacks = totalSacks;
+    dataActor.encumbered = invSlotsUsed > 10 ? true : false
+    dataActor.overEncumbered = invSlotsUsed > 20 ? true : false
     dataActor.gears = gears;
     dataActor.weapons = weapons;
     dataActor.armors = armors;
