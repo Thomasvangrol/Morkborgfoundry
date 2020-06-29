@@ -35,6 +35,12 @@
     color: $mb-white;
   }
   
+  textarea {
+    background: $mb-black;
+    color: $mb-white;
+    border: 1px solid $mb-yellow;
+  }
+
   label {
     font-weight: bold;
     text-transform: capitalize;

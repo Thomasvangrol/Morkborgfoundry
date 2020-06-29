@@ -45,14 +45,14 @@
           </div>
 
           <div class="header-item flexrow flex-between">
-              <label class="mb-label"  for="data.level.value">Level</label>
-              <input class="small-input" type="text" name="data.level.value" value="{{data.level.value}}" data-dtype="Number"/>
-            </div>
+            <label class="mb-label"  for="data.level.value">Level</label>
+            <input class="small-input" type="text" name="data.level.value" value="{{data.level.value}}" data-dtype="Number"/>
+          </div>
             
-            <div class="header-item flexrow flex-between">
-              <label class="mb-label"  for="data.experiences">Experiences</label>
-              <input class="small-input" type="text" name="data.experiences" value="{{data.experiences}}" data-dtype="Number"/>
-            </div>
+          <div class="header-item flexrow flex-between">
+            <label class="mb-label"  for="data.experiences">Experiences</label>
+            <input class="small-input" type="text" name="data.experiences" value="{{data.experiences}}" data-dtype="Number"/>
+          </div>
         </div>
     
         <div class="flex-left">
@@ -89,7 +89,7 @@
 
     <div class="content">
       <nav class="sheet-tabs tabs" data-group="primary">
-        <a class="item" data-tab="class">Class</a>
+        <a class="item" data-tab="main">Class</a>
         <a class="item" data-tab="items">Items</a>
         <a class="item" data-tab="scrolls">Scrolls</a>
         <a class="item" data-tab="description">Character</a>
@@ -97,7 +97,7 @@
 
       <section class="sheet-body">
         {{!-- Class Tab --}}
-        <div class="tab class" data-group="primary" data-tab="class">
+        <div class="tab class" data-group="primary" data-tab="main">
           
           <div class="class-grid">
 
@@ -322,7 +322,7 @@
         </div>
 
         {{!-- Biography Tab --}}
-        <div class="tab biography" data-group="primary" data-tab="description">
+        <div class="tab description" data-group="primary" data-tab="description">
             {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
         </div>
       </section>

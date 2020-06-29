@@ -18,7 +18,7 @@
         }
 
         .left-column-input {
-            min-height: 40px;
+            min-height: 30px;
         }
     }
 
@@ -26,10 +26,10 @@
         grid-area: header; 
         padding: 10px 20px;
         text-align: left;
+    }
 
-        .header-item {
-            margin-bottom: 10px;
-        }
+    .header-item {
+        margin-bottom: 10px;
     }
 
     .content { 

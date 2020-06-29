@@ -12,7 +12,7 @@ export class MorkBorgActorSheet extends ActorSheet {
       classes: ["morkborg", "sheet", "actor"],
       width: 900,
       height: 620,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "class" }]
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "main" }]
     });
   }
 
@@ -42,11 +42,74 @@ export class MorkBorgActorSheet extends ActorSheet {
       dataActor.classObjectList = await MbClassList.getClasses(false);
       this._prepareCharacterItems(data);
     }
-    // else if (this.actor.data.type == 'npc') {
-    //   this._prepareNpcItems(data);
-    // }
+    else if (this.actor.data.type == 'npc') {
+      this._prepareNpcItems(data);
+    }
 
     return data;
+  }
+
+   /**
+   * Organize and classify Items for NPC sheets.
+   *
+   * @param {Object} actorData The actor to prepare.
+   *
+   * @return {undefined}
+   */
+  _prepareNpcItems(data) {
+    const dataActor = data.actor;
+
+    // Initialize containers.
+    const gears = [];
+    const weapons = [];
+    const armors = [];
+    const scrolls = {
+      "unclean": [],
+      "sacred": [],
+      "unknown": []
+    }
+
+    // Iterate through items, allocating to containers
+    for (let i of data.items) {
+      let item = i.data;
+      i.img = i.img || DEFAULT_TOKEN;
+
+      // Append to weapons.
+      if (i.type === 'weapon') {
+        weapons.push(i);
+      }
+      
+      // Append to armors.
+      else if (i.type === 'armor') {
+        armors.push(i);
+      }
+
+      // Append to scrolls.
+      else if (i.type === 'scroll') {
+        // scrolls.push(i);
+        switch (item.scrollType) {
+          case 'unclean':
+            scrolls[item.scrollType].push(i);
+            break;
+          case 'sacred':
+            scrolls[item.scrollType].push(i);
+            break;
+          default:
+            scrolls["unknown"].push(i);
+            break;
+        }
+      }
+      
+      // Append to gear list.
+      else if (i.type === 'gear') {
+        gears.push(i);
+      }
+    }
+
+    dataActor.gears = gears;
+    dataActor.weapons = weapons;
+    dataActor.armors = armors;
+    dataActor.scrolls = scrolls;
   }
 
    /**
