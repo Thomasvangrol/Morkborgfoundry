@@ -68,6 +68,21 @@
     }
 })()
 
+// NPCs
+( async () => {
+  const bestiaryPack = game.packs.find(p => p.collection === `morkborg.bestiary`);
+  const bestiaryResponse = await fetch(`systems/morkborg/compendium/bestiary.json`);
+  const bestiaryContent = await bestiaryResponse.json();
+  const bestiaryItems = await Actor.create(bestiaryContent, {temporary: true});
+
+  console.log(bestiaryPack);
+
+  for ( let i of bestiaryItems ) {
+    await bestiaryPack.importEntity(i);
+    console.log(`Imported Actor ${i.name} into Compendium bestiaryPack ${bestiaryPack.collection}`);
+  }
+})()
+
 // async function fetchAsync () {
 //    let response = await fetch('systems/morkborg/compendium/armor.json');
 //    let data = await response.json();
