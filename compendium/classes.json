@@ -522,5 +522,59 @@
         },
         "flags": {},
         "img": "systems/morkborg/icons/classes/default.png"
+    },
+    {
+        "name": "Profane Spawn",
+        "permission": {
+            "default": 0
+        },
+        "type": "class",
+        "data": {
+            "type": "custom",
+            "description": "Your otherworldly appearance is evidence you’re not solely human. Depending on who you ask you are the seed  of the gods, the innocent victim of a curse of the result of inbreeding. Likely all of those together. Some despise you, some revere you. Thus is your way, for you are the word.",
+            "omensDice": "1d4",
+            "canUseScrolls": true,
+            "modifiers": [
+                "You are offspring of (d5) 1. SHE, Lusi; 2. SHE, Arkh; 3. HE, Verhu; 4. HE, Gorgh; 5. Nechrubel.",
+                "How Do You Feel About Your Ancestry? (D6) 1. Hateful. Bitter and belligerent against the god that begot you.; 2. Disgusted. Your nature and your own self sicken you.; 3. Ashamed. You hide it try to live in anonymity.; 4. At peace. You learned to make peace with it and accept it.; 5. Favored: You preach about your ancestry with the authority your blood grants you.; 6. Chosen: You are the true descendant of the Gods and should be worshiped as such.",
+                "You have the gift of Sibylline Sight: you have visions of the future (-1DR when defending), and can see in the dark."
+            ],
+            "startingInfo": {
+              "startingSilverDice": "2d6",
+              "startingSilverMod": "10",
+              "startingHitPointDice": "1d4",
+              "startingHitPointAtt": "toughness",
+              "strMod": -1,
+              "agiMod": 0,
+              "preMod": 2,
+              "touMod": -1,
+              "weaponsDice": "1d4",
+              "armorDice": "1d2",
+              "abilities": {
+                "description": "You have been bestowed with one of the following:",
+                "options": [
+                    "Shepherd The Departed: You can bring forth the spirits of the dead and speak with them. Test Presence DR12 to convince them to fight by your side. They’ll never go far from where their body is resting. Their HP as a spirit is 1/3 of their normal HP.",
+                    "Dark stigmata: Open wounds from a past torture. You can touch the flesh of a foe with your palms to cause d6 damage. It cannot be healed, as it doesn't wound their body, but their soul.",
+                    "Atonement Of The Heathen: You can possess a target. Test Presence DR12 to succeed. Its body becomes paralyzed, but you can also control it with a result of 16+. Meanwhile, your own body will stay still and vulnerable, and if injured the bond will break. If the target is hurt, test Presence again to maintain the possession. Once inside their mind you can search for a specific memory. GM rolls a d6, on 1-2 the memory is distorted.",
+                    "Shall be risen: If you are Broken or your HP drops to -1, you come back alive with d4 HP. You cannot resuscitate again until 2d4 days have passed.",
+                    "Covenant Of The Flesh: Consuming your meat has healing effects. You can cut a small piece of yourself to give to someone else. You lose d2 HP and they recover d4 HP. If they had an illness, test Toughness DR12. On a crit, they are healed; on a success, they are cured but you get the disease; on a fail, nothing changes; on a fumble, both of you are ill.",
+                    "Cult Following: Your messianic aura attracts devotees to your person. D4 disciples follow and obey you. (2 HP, punch/club d4) If you are in danger they will put their bodies between you and any harm coming your way. If one dies, a new one will occupy their spot in a couple of days. The first time the Unholy Spawn gets better add another d4 disciples to your following."
+                ]
+              },
+              "origins": {
+                "description": "The miracle that manifested your heritage (d6)",
+                "options": [
+                    "Resurrected a neighbor, that you may or may not have killed.",
+                    "Pulled 66 silver pieces from the mouth of a snake.",
+                    "You mother, a harlot in Schleswig, immaculately conceived you.",
+                    "Made a healthy child go mute, and blind and leprous.",
+                    "Turned several barrels of ale to urine. Nobody noticed.",
+                    "Blessed an infertile woman to become with child. She birthed a goblin."
+                ]
+              }
+            }
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/classes/default.png"
     }
 ]
