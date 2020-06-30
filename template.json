@@ -26,7 +26,7 @@
       },
       "defence": {
         "description": "",
-        "defenceDice": "1d2"
+        "defenceDice": ""
       },
       "attack": {
         "description": "",
