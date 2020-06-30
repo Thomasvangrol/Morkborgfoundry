@@ -273,7 +273,7 @@
 }
 
 .morkborg .char-sheet .left-column .left-column-input {
-  min-height: 40px;
+  min-height: 30px;
 }
 
 .morkborg .char-sheet .header {
@@ -282,7 +282,7 @@
   text-align: left;
 }
 
-.morkborg .char-sheet .header .header-item {
+.morkborg .char-sheet .header-item {
   margin-bottom: 10px;
 }
 
@@ -388,6 +388,12 @@
 .morkborg body {
   font-family: "Inconsolata", "Signika", sans-serif;
   color: white;
+}
+
+.morkborg textarea {
+  background: black;
+  color: white;
+  border: 1px solid #ffe72e;
 }
 
 .morkborg label {

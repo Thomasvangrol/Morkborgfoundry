@@ -12,7 +12,7 @@ export class MorkBorgActorSheet extends ActorSheet {
       classes: ["morkborg", "sheet", "actor"],
       width: 900,
       height: 620,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "class" }]
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "main" }]
     });
   }
 
@@ -42,24 +42,22 @@ export class MorkBorgActorSheet extends ActorSheet {
       dataActor.classObjectList = await MbClassList.getClasses(false);
       this._prepareCharacterItems(data);
     }
-    // else if (this.actor.data.type == 'npc') {
-    //   this._prepareNpcItems(data);
-    // }
+    else if (this.actor.data.type == 'npc') {
+      this._prepareNpcItems(data);
+    }
 
     return data;
   }
 
    /**
-   * Organize and classify Items for Character sheets.
+   * Organize and classify Items for NPC sheets.
    *
    * @param {Object} actorData The actor to prepare.
    *
    * @return {undefined}
    */
-  _prepareCharacterItems(data) {
+  _prepareNpcItems(data) {
     const dataActor = data.actor;
-
-    this._processClass(data)
 
     // Initialize containers.
     const gears = [];
@@ -72,7 +70,6 @@ export class MorkBorgActorSheet extends ActorSheet {
     }
 
     // Iterate through items, allocating to containers
-    // let totalWeight = 0;
     for (let i of data.items) {
       let item = i.data;
       i.img = i.img || DEFAULT_TOKEN;
@@ -109,7 +106,98 @@ export class MorkBorgActorSheet extends ActorSheet {
       }
     }
 
+    dataActor.gears = gears;
+    dataActor.weapons = weapons;
+    dataActor.armors = armors;
+    dataActor.scrolls = scrolls;
+  }
+
+   /**
+   * Organize and classify Items for Character sheets.
+   *
+   * @param {Object} actorData The actor to prepare.
+   *
+   * @return {undefined}
+   */
+  _prepareCharacterItems(data) {
+    const dataActor = data.actor;
+    const dataData = data.data;
+
+    this._processClass(data)
+
+    // Initialize containers.
+    const gears = [];
+    const weapons = [];
+    const armors = [];
+    const scrolls = {
+      "unclean": [],
+      "sacred": [],
+      "unknown": []
+    }
+
+    let sacks = 0;
+    let stones = 0;
+    let soaps = 0;
+
+    // Iterate through items, allocating to containers
+    for (let i of data.items) {
+      let item = i.data;
+      i.img = i.img || DEFAULT_TOKEN;
+
+      sacks += item.encumbrance.sacks
+      stones += item.encumbrance.stones
+      soaps += item.encumbrance.soaps
+
+      // Append to weapons.
+      if (i.type === 'weapon') {
+        weapons.push(i);
+      }
+      
+      // Append to armors.
+      else if (i.type === 'armor') {
+        armors.push(i);
+      }
+
+      // Append to scrolls.
+      else if (i.type === 'scroll') {
+        // scrolls.push(i);
+        switch (item.scrollType) {
+          case 'unclean':
+            scrolls[item.scrollType].push(i);
+            break;
+          case 'sacred':
+            scrolls[item.scrollType].push(i);
+            break;
+          default:
+            scrolls["unknown"].push(i);
+            break;
+        }
+      }
+      
+      // Append to gear list.
+      else if (i.type === 'gear') {
+        gears.push(i);
+      }
+    }
+
+    const totalSoaps = soaps % 100;
+    stones += Math.floor(soaps / 100);
+    const totalStones = stones % 10;
+    const totalSacks = sacks + Math.floor(stones / 10);
+
+    let invSlotsUsed = stones + (sacks * 10);
+
+    if (totalSoaps > 1) {
+      invSlotsUsed ++;
+    }
+
     // Assign and return
+    dataData.inventorySlots.value = invSlotsUsed;
+    dataData.encumbrance.soaps = totalSoaps;
+    dataData.encumbrance.stones = totalStones;
+    dataData.encumbrance.sacks = totalSacks;
+    dataActor.encumbered = invSlotsUsed > 10 ? true : false
+    dataActor.overEncumbered = invSlotsUsed > 20 ? true : false
     dataActor.gears = gears;
     dataActor.weapons = weapons;
     dataActor.armors = armors;
