@@ -109,6 +109,12 @@
 }
 
 /* Styles limited to morkborg sheets */
+.morkborg {
+  /* ----------------------------------------- */
+  /*  TinyMCE                                  */
+  /* ----------------------------------------- */
+}
+
 .morkborg .item-form {
   font-family: "Inconsolata", "Signika", sans-serif;
 }
@@ -177,7 +183,7 @@
 
 .morkborg .tabs .item:hover, .morkborg .tabs .item:focus {
   background: white;
-  color: #000;
+  color: black;
 }
 
 .morkborg .tabs .item.active {
@@ -425,6 +431,50 @@
   border: 1px solid #ffe72e;
 }
 
+.morkborg button {
+  border: 1px solid;
+  color: white;
+  margin: 0 10px 0;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.morkborg button:hover {
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+
+.morkborg .defense {
+  background: #00ff4027;
+  border: 1px solid;
+  color: white;
+  margin: 0 10px 0;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.morkborg .defense:hover {
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+
+.morkborg .attack {
+  background: #4b1235;
+  border: 1px solid;
+  color: white;
+  margin: 0 10px 0;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.morkborg .attack:hover {
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+
 .morkborg select {
   height: 25px;
   background: black;
@@ -441,4 +491,8 @@
   background: black;
   color: white;
   text-shadow: 0 1px 0 #f142af;
+}
+
+.morkborg .editor-content:empty:before {
+  content: "This text is editable";
 }

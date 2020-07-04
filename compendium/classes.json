@@ -628,5 +628,41 @@
         },
         "flags": {},
         "img": "systems/morkborg/icons/classes/default.png"
+    },
+    {
+        "name": "Classless",
+        "permission": {
+            "default": 0
+        },
+        "type": "class",
+        "data": {
+            "type": "custom",
+            "description": "In this world there are those who seek riches or redemption. Some say the apocalypse is escapable, that it might even be stopped. And there you walk in discord and despair. One hand holds 2d6 × 10 silvers, the other holds a waterskin and d4 days worth of food. Your soul and your silver are your own and equally easy to lose.",
+            "omensDice": "1d2",
+            "canUseScrolls": true,
+            "modifiers": [],
+            "startingInfo": {
+              "startingSilverDice": "2d6",
+              "startingSilverMod": "10",
+              "startingHitPointDice": "1d8",
+              "startingHitPointAtt": "toughness",
+              "strMod": 0,
+              "agiMod": 0,
+              "preMod": 0,
+              "touMod": 0,
+              "weaponsDice": "1d10",
+              "armorDice": "1d4",
+              "abilities": {
+                "description": "",
+                "options": []
+              },
+              "origins": {
+                "description": "",
+                "options": []
+              }
+            }
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/classes/default.png"
     }
 ]
