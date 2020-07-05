@@ -113,6 +113,17 @@
   /* ----------------------------------------- */
   /*  TinyMCE                                  */
   /* ----------------------------------------- */
+  /*
+  suppose you have class MyActorSheet extends ActorSheet {
+  you need to define MyActorSheet._createEditor()
+  (AFK) Anathema (He/Him)[UTC-7]04/11/2020
+  awesome. Clarity achieved.
+
+  _createEditor(target, editorOptions, initialContent) {
+    editorOptions.content_css = "your/css/path.css";
+    return super._createEditor(target, editorOptions, initialContent);
+  });
+  */
 }
 
 .morkborg .item-form {
@@ -495,4 +506,9 @@
 
 .morkborg .editor-content:empty:before {
   content: "This text is editable";
+}
+
+.morkborg .tinymcewrapper {
+  background: white;
+  color: black;
 }

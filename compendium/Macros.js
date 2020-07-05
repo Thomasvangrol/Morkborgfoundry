@@ -161,3 +161,30 @@
 //   }
   
 //   importGear(content);
+
+// ---------------------------
+
+// getting all actors of selected tokens
+let actors = canvas.tokens.controlled.map(({ actor }) => actor);
+// TODO make sure only legal targets can do this.
+
+// if there are no selected tokens, roll for the player's character.
+if (actors.length < 1) {
+    actors.push(game.user.character);
+}
+const validActors = actors.filter(actor => actor != null);
+
+if (validActors.length !== 1) {
+    ui.notifications.warn("No selected tokens or Charater set for user.");
+} else {
+    let actor = validActors[0];
+    let mod = actor.data.data.abilities.agility.value;
+
+    let roll = new Roll("1d20+"+mod, actor.actorData);
+
+    // create the message
+    roll.roll().toMessage({
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        flavor: "<b>Rolling Defense</b>"
+    });
+}

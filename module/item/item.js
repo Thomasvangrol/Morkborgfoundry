@@ -45,4 +45,38 @@ export class MorkBorgItem extends Item {
       }
     }
   }
+
+/**
+ * Handle clickable rolls.
+ * @param {Event} event The originating click event
+ * @private
+ */
+async roll() {
+  // Basic template rendering data
+  const token = this.actor.token;
+  const item = this.data;
+  const actorData = this.actor ? this.actor.data.data : {};
+  const itemData = item.data;
+
+  // Define the roll formula.
+  let roll = null;
+  let label = null;
+  if (item.type === "armor") {
+    roll = new Roll(itemData.damageReductionDice, actorData);
+    label = `<b>${item.name} Damage Reduction</b>`;
+  } else if (item.type === "weapon") {
+    roll = new Roll(itemData.damageDice, actorData);
+    label = `<b>${item.name} Damage</b>`;
+  } else {
+    // something went wrong
+    return ui.notifications.warn(`Error: Item was not of type Armor or Weapon.`);
+  }
+  
+  // Roll and send to chat.
+  roll.roll().toMessage({
+    speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+    flavor: label
+  });
+}
+
 }

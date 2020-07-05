@@ -238,6 +238,19 @@ export class MorkBorgActorSheet extends ActorSheet {
 
     // Rollable abilities.
     html.find('.rollable').click(this._onRoll.bind(this));
+
+    // Drag events for macros.
+    if (this.actor.owner) {
+      let handler = ev => this._onDragItemStart(ev);
+      // Find all items on the character sheet.
+      html.find('li.item').each((i, li) => {
+        // Ignore for the header row.
+        if (li.classList.contains("item-header")) return;
+        // Add draggable attribute and dragstart listener.
+        li.setAttribute("draggable", true);
+        li.addEventListener("dragstart", handler, false);
+      });
+    }
   }
 
   /* -------------------------------------------- */
