@@ -2,7 +2,7 @@
   "name": "morkborg",
   "title": "Mork Borg",
   "description": "The Mork Borg system for FoundryVTT!",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "compatibleCoreVersion": "0.6.4",
   "minimumCoreVersion": "0.6.0",
   "templateVersion": 2,
@@ -81,7 +81,7 @@
   "secondaryTokenAttribute": null,
   "url": "https://gitlab.com/foundryvtt-mods/morkborg",
   "manifest": "https://gitlab.com/foundryvtt-mods/morkborg/-/raw/main/system.json",
-  "download": "https://gitlab.com/foundryvtt-mods/morkborg/-/archive/0.0.4/morkborg-0.0.4.zip",
+  "download": "https://gitlab.com/foundryvtt-mods/morkborg/-/archive/0.0.5/morkborg-0.0.5.zip",
   
   "license": null
 }
