@@ -239,6 +239,12 @@ export class MorkBorgActorSheet extends ActorSheet {
     // Rollable abilities.
     html.find('.rollable').click(this._onRoll.bind(this));
 
+    // Item summaries
+    html.find('.item .item-name h4').click(event => this._onItemSummary(event));
+
+    // Item Rolling
+    html.find('.item .action').click(event => this._onItemRoll(event));
+
     // Drag events for macros.
     if (this.actor.owner) {
       let handler = ev => this._onDragItemStart(ev);
@@ -300,6 +306,99 @@ export class MorkBorgActorSheet extends ActorSheet {
         flavor: label
       });
     }
+  }
+
+    /**
+   * Handle expand/collapse of an item on the character sheet
+   * @private
+   */
+  _onItemSummary(event) {
+    event.preventDefault();
+    let li = $(event.currentTarget).parents(".item");
+    let item = this.actor.getOwnedItem(li.data("item-id"));
+        // chatData = item.getChatData({secrets: this.actor.owner});
+
+    // Toggle summary
+    if ( li.hasClass("expanded") ) {
+      let summary = li.children(".item-summary");
+      summary.slideUp(200, () => summary.remove());
+    } else {
+      let div = $(`<div class="item-summary">${item.data.data.description}</div>`);
+      let props = $(`<div class="item-properties"></div>`);
+
+      props.append(`<span class="tag">Silver ${item.data.data.silver}</span>`);
+
+      // TODO clean this up on the items object
+      let strEnc = "";
+      if (item.data.data.encumbrance.sacks > 0) {
+        strEnc += item.data.data.encumbrance.sacks
+        if (item.data.data.encumbrance.sacks > 1) {
+          strEnc += " Sacks"
+        } else {
+          strEnc += " Sack"
+        }
+        if (item.data.data.encumbrance.stones > 0 || item.data.data.encumbrance.soaps > 0) {
+          strEnc += ", "
+        }
+      }
+      if (item.data.data.encumbrance.stones > 0) {
+        strEnc += item.data.data.encumbrance.stones
+        if (item.data.data.encumbrance.stones > 1) {
+          strEnc += " Stones"
+        } else {
+          strEnc += " Stone"
+        }
+        if (item.data.data.encumbrance.soaps > 0) {
+          strEnc += ", "
+        }
+      }
+      if (item.data.data.encumbrance.soaps > 0) {
+        strEnc += item.data.data.encumbrance.soaps
+        if (item.data.data.encumbrance.soaps > 1) {
+          strEnc += " Soaps"
+        } else {
+          strEnc += " Soap"
+        }
+      }
+
+      props.append(`<span class="tag">Encumbrance ${strEnc}</span>`);
+
+      if (item.data.data.isConsumable) {
+        props.append(`<span class="tag">Usage Die ${item.data.data.usageDie} ${item.data.data.usageDieType}</span>`);
+      }
+
+      if (item.data.data.hasLight) {
+        props.append(`<span class="tag">Light Source Radius ${item.data.data.lightRadius}, Strength ${item.data.data.lightStrength}</span>`);
+      }
+
+      div.append(props);
+      li.append(div.hide());
+      div.slideDown(200);
+    }
+    li.toggleClass("expanded");
+  }
+
+  /**
+   * Handle rolling of an item from the Actor sheet, obtaining the Item instance and dispatching to it's roll method
+   * @private
+   */
+  _onItemRoll(event) {
+    event.preventDefault();
+    const itemId = event.currentTarget.closest(".item").dataset.itemId;
+    const item = this.actor.getOwnedItem(itemId);
+
+    // Trigger the item roll
+    if ( item.data.type === "scroll" ) {
+      return ui.notifications.warn(`Scrolls cannot be in the rolled yet.`);
+      // TODO return actor.useScroll(item);
+    }
+    if ( item.data.type === "gear" ) {
+      return ui.notifications.warn(`Gear cannot be in the rolled yet.`);
+      // TODO return actor.useGear(item);
+    }
+
+    // Otherwise roll the Item directly
+    else return item.roll();
   }
 
 }

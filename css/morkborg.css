@@ -207,65 +207,146 @@
 .morkborg .items-list {
   list-style: none;
   margin: 7px 0;
-  padding: 0;
+  padding: 0 5px;
   overflow-y: auto;
+  scrollbar-width: thin;
+  /* Tags */
 }
 
 .morkborg .items-list .item {
-  height: 30px;
-  line-height: 24px;
-  padding: 3px 20px;
+  line-height: 30px;
+  padding: 0 2px;
   border-bottom: 1px solid #ffffff18;
 }
 
-.morkborg .items-list .item .item-image {
+.morkborg .items-list .item:last-child {
+  border-bottom: none;
+}
+
+.morkborg .items-list .item .item-name {
+  cursor: pointer;
+  max-height: 30px;
+  overflow: hidden;
+}
+
+.morkborg .items-list .item .item-name .item-image {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 24px;
-  flex: 0 0 24px;
+  -ms-flex: 0 0 30px;
+  flex: 0 0 30px;
+  background-size: 30px;
   margin-right: 5px;
 }
 
-.morkborg .items-list .item img {
-  display: block;
-  border: none;
-}
-
-.morkborg .items-list .item-header {
-  font-weight: bold;
-  color: #ffe72e;
-  background-color: #ffffff18;
-  border: none;
-  padding: 3px 10px;
-  margin-top: 10px;
-}
-
-.morkborg .items-list .item-header .item-name {
-  font-family: "Rakkas", cursive, serif;
-}
-
-.morkborg .items-list .item-name {
+.morkborg .items-list .item .item-name h4 {
   margin: 0;
+  white-space: nowrap;
+  overflow-x: hidden;
 }
 
-.morkborg .items-list .item-controls {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 100px;
-  flex: 0 0 100px;
-  text-align: right;
+.morkborg .items-list .item .item-properties {
+  margin-top: 3px;
 }
 
-.morkborg .items-list .item-controls .item-control {
+.morkborg .items-list .item .action {
   color: #f142af;
 }
 
-.morkborg .items-list .item-controls .item-control:hover, .morkborg .items-list .item-controls .item-control:focus {
+.morkborg .items-list .item .action:hover, .morkborg .items-list .item .action:focus {
   color: white;
   text-shadow: 0 0 10px #f142af;
   cursor: pointer;
 }
 
-.morkborg .item-group {
-  padding: 10px;
+.morkborg .items-list .item-header {
+  color: #ffe72e;
+  background-color: #ffffff18;
+  margin: 2px 0;
+  padding: 0;
+  border: 2px groove #ffffff18;
+  font-weight: bold;
+}
+
+.morkborg .items-list .item-header .item-image {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 30px;
+  flex: 0 0 30px;
+  margin-right: 5px;
+}
+
+.morkborg .items-list .item-header img {
+  display: block;
+  border: none;
+}
+
+.morkborg .items-list .item-header .item-detail {
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.morkborg .items-list .item-header h3 {
+  padding-left: 5px;
+  font-family: "Rakkas", cursive, serif;
+  margin: 0px;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.morkborg .items-list .item-detail {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 70px;
+  flex: 0 0 70px;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  border-right: 1px solid #ffffff18;
+  word-break: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.morkborg .items-list .item-detail:last-child {
+  border-right: none;
+}
+
+.morkborg .items-list .item-controls {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 55px;
+  flex: 0 0 55px;
+  text-align: right;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding-right: 10px;
+}
+
+.morkborg .items-list .item-controls a {
+  color: #f142af;
+}
+
+.morkborg .items-list .item-controls a:hover, .morkborg .items-list .item-controls a:focus {
+  color: white;
+  text-shadow: 0 0 10px #f142af;
+  cursor: pointer;
+}
+
+.morkborg .items-list .item-summary {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 0.25em 0.5em;
+  border-top: 1px solid #ffffff18;
+}
+
+.morkborg .items-list .tag {
+  display: inline-block;
+  margin: 0 2px 0 0;
+  padding: 0 3px;
+  font-size: 10px;
+  line-height: 16px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.05);
 }
 
 .morkborg .char-sheet {
