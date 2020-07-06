@@ -184,7 +184,7 @@ if (validActors.length !== 1) {
 
     // create the message
     roll.roll().toMessage({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      speaker: ChatMessage.getSpeaker({ actor: actor }),
         flavor: "<b>Rolling Defense</b>"
     });
 }
