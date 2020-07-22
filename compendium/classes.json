@@ -664,5 +664,55 @@
         },
         "flags": {},
         "img": "systems/morkborg/icons/classes/default.png"
+    },
+    {
+        "name": "Landlocked Buccaneer",
+        "permission": {
+            "default": 0
+        },
+        "type": "class",
+        "data": {
+            "type": "custom",
+            "description": "Once a seafaring, deck swabbing, swashbuckling rover. Now, a defanged murder-whale, a barnacle torn from hull. In your dreams, you feel the salt in your eyes, the savory taste of the ship rats, and the pull of the monsters below. In your nightmares, the very same things.",
+            "omensDice": "1d2",
+            "canUseScrolls": true,
+            "modifiers": ["Used to fightin’ dirty: prior to a melee attack, you may describe how you gain a sneaky advantage and add 1d6 to the total result. Should you still miss, the enemy gets a free attack."],
+            "startingInfo": {
+              "startingSilverDice": "2d6",
+              "startingSilverMod": "10",
+              "startingHitPointDice": "1d8",
+              "startingHitPointAtt": "toughness",
+              "strMod": -1,
+              "agiMod": -1,
+              "preMod": 1,
+              "touMod": 1,
+              "weaponsDice": "1d10",
+              "armorDice": "1d2",
+              "abilities": {
+                "description": "You begin with one (1) Booty (d6)",
+                "options": [
+                    "Peg Leg of Pozeidönne: After losing your leg to the sea, a half-fish-half-man took pity and proffered this substitute of carved whale’s bone. Its hollowed out base fills with concentrated brine overnight. Pouring the eroding liquid on a solid surface will make a hole - five feet wide and just as deep - within minutes. Don’t drink it",
+                    "Cursed Coin: An ancient gold coin taken from heretics on the isle of Crëlut. Until you return it, you are doomed to a cursed fate: to remain in this world a moment longer. Negative HP means you’re broken instead of necessarily dead.",
+                    "Saltstone Eye: A scavenger pelican took your eye one night, but left something in its place. Your crusty socket itches constantly, but stings when danger is about to strike. Defence is DR10 and crits on a natural 19 as well as 20.",
+                    "Few-feathered parrot: A mangy yet murderous parrot friend. Throw it at an enemy and the bird attacks against DR10, dealing d4 damage. On a 4, it continues its deadly trajectory, instantly making an attack against another enemy. Can and will repeat things it hears. HP d6+1",
+                    "Soaking Cutlass: Attacks and defends against DR10. Damage is d6 and on a 6, a wave of seawater erupts from the blade. Creatures in front of you must test Strength against DR12 or be knocked off their feet, taking d4 damage.",
+                    "Sand-filled Boots: These boots allow you to walk on water as if it were a beach. As you move, you leave floating footsteps, lasting a round. Others may test Agility against DR10 to follow behind."
+                ]
+              },
+              "origins": {
+                "description": "Stranded Since",
+                "options": [
+                    "Your ship was quarantined and scuttled outside grift",
+                    "The crew had you walk the plank",
+                    "A siren lured you aground",
+                    "The Storm",
+                    "You were pardoned by a wastland court",
+                    "The ship froze in the waters 3 sea-miles off the coast of Kergus"
+                ]
+              }
+            }
+        },
+        "flags": {},
+        "img": "systems/morkborg/icons/classes/default.png"
     }
 ]
