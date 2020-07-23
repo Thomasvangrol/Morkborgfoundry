@@ -352,7 +352,24 @@
                     "BONE SKULLED RAVEN: Fast and flying, defence is DR10. Make two attacks per round with your claws (d4). Your bony scalp (d6) acts as a weapon and a shield: -1 damage and you may choose to ignore all damage from one attack. The skull will heal in d6 days.",
                     "BEAR FROM BERGEN CHRYPT: Hulking and massive: tests for Strength and Toughness, as well as attacks, are DR10. Defence is DR14. Thick hide, -d4 incoming damage. Your claws and bite deal d8 damage.",
                     "LIFE-AND-DEATH-LIZARD: Regenerate d4 HP per round. Bite (d6) or spit acid (d4, 1 in 4 chance armor is lowered one tier). Scaly skin, -d2 incoming damage.",
-                    "DOOMSAYING MONKEY:  Dextrous: Agility tests, including defence, are DR10. Light armor and weapons remain Usable. Your third eye allows you to read unclean scrolls at DR10."
+                    "DOOMSAYING MONKEY:  Dextrous: Agility tests, including defence, are DR10. Light armor and weapons remain Usable. Your third eye allows you to read unclean scrolls at DR10.",
+                    "BLEATING DEVIL-RAM: You can Ram for d8. On a 1-2 form a d6 the creature is toppled over and cant attack for a turn. Thick Black Fleece -d4 Hell's Bells, You have a Cursed bell around your neck and it rings with dread. Once a round you can make a creature test for Morale.",
+                    "RUIN BASILISK: In the shape of this single-headed sacred beast you can fool the simple into devotion and worship (+5 to reaction checks) but scholars and priests will likely see through the façade (-5 to reaction checks).",
+                    "ABYSSAL CHICKEN AKA COCKATRICE BEAK: d4 damage and Stone Peck Stone Peck: 1. On the first successful attack, DR to defend decreases by 2 2. On the second successful attack, DR to attack decreases by 2 3. On third successful hit, target turns to stone for d4 days",
+                    "FORSAKEN HOG: Make two attacks per round with your Bite (d4). - Thick Hide: -d4 incoming damage Slop: Incoming melee attacks are -2. Failed Morale checks cause Infection.",
+                    "SACRED MAN-FACED STAG: Enormous Horns d8 , Golden Fleece -d6 Holy Light: You emit a blinding light. Creatures cannot come near you unless they pass a Morale if they pass you become their sole target. They want that Fleece. Healing Light: Allies near you gain d2 hp on your turn.",
+                    "GOBLIN-SNIFFING DOG: Bite d4, mottled fur -d2 Keen Nose: You can Sniff out Goblins in an adjacent room to you. Alarming Bark: You bark loudly alerting all creatures near by. They make a Morale roll, if they succeed they become hostile and search for you if not they Flee.",
+                    "REGULAR MOLE: You can dig a 6 feet deep hole per turn, but you are blind in daylight.",
+                    "HERMIT CRAB: Has extremely sharp pinchers (d6 damage). Suffocates if not in water for longer than 2 hours at a time.",
+                    "BLOODY LORIS: your eyes distract any human near giving you a +2 on attack/defence for 3 turns.",
+                    "LAUGHING HYAENIDAE: bite d6. Your raging sounds force a morale roll.",
+                    "TROLL CHILD: fists d8. Thick hide -2. Coward: changes back in d8 turns.",
+                    "SLIPPERY SLUG: Not affected by piercing attacks or razor weapons. +2 on attack/defence for 2 turns. Can't hold anything.",
+                    "SPIKY HEDGEHOG: d6 throwing spikes. 1 on 6 chances of piercing yourself with these.",
+                    "SHOCK SHARK: Can instantly teleport to a spot within 30 feet in a flash of sparking electricity. d8 (nasty bite). If your victim is wearing armor, they take an additional d4 damage from sparks that fly from your teeth (ignoring armor). Can't survive out of water for long.",
+                    "GODSHIELD CHELONIAN: This turtle can hide in its iron-like shell to become impervious to all damage. Doing so takes 5 minutes (during which the turtle can do nothing else). Emerging again takes 15 minutes. It is immobile and cannot act while hiding.",
+                    "HELL HOUND: A shuddering beast covered in hanging icicles. d6 (frost bite). Can unleash a cone of freezing breath: all targets must test DR12 AGI or take d4 damage and -3 on all AGI rolls until they warm themselves up.",
+                    "FEARWIG: A wound made by this pincer-assed insect will fill it's victim with primal fear. Bite/forceps d4 + Test Presence DR10 or flee/cower in fear for d10 rounds."
                 ]
               },
               "origins": {
