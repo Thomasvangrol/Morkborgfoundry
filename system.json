@@ -66,6 +66,14 @@
       "module": "morkborg",
       "path": "./packs/macros.db",
       "entity": "Macro"
+    },
+    {
+      "name": "tables",
+      "label": "Tables",
+      "system": "morkborg",
+      "module": "morkborg",
+      "path": "./packs/tables.db",
+      "entity": "RollTable"
     }
   ],
   "languages": [
