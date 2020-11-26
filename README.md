@@ -1,6 +1,7 @@
 # Foundry VTT MÖRK BORG
 
 An implementation of the MÖRK BORG game system for [Foundry Virtual Tabletop](http://foundryvtt.com).
+Code by Joseph Hodpson, I'm just trying to update it for this version of Foundry
 
 ## Installation Instructions
 
