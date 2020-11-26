@@ -87,8 +87,8 @@
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": null,
-  "url": "https://gitlab.com/foundryvtt-mods/morkborg",
-  "manifest": "https://gitlab.com/foundryvtt-mods/morkborg/-/raw/main/system.json",
-  "download": "https://gitlab.com/foundryvtt-mods/morkborg/-/archive/0.0.6/morkborg-0.0.6.zip",
+  "url": "https://github.com/Thomasvangrol/Morkborgfoundry",
+  "manifest": "https://github.com/Thomasvangrol/Morkborgfoundry/system.json",
+  "download": "https://github.com/Thomasvangrol/Morkborgfoundry/archive/0.0.6/morkborg-0.0.6.zip",
   "license": null
 }
